@@ -1,0 +1,1670 @@
+{
+  "version": "15.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "greengrass-stream-mgr-accel": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://859885678936/us-west-2",
+      "properties": {
+        "templateFile": "greengrass-stream-mgr-accel.template.json",
+        "validateOnSynth": false
+      },
+      "metadata": {
+        "/greengrass-stream-mgr-accel": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.aaec3f22c391811952f80fcf67149791853ae84afe5f063edde0309e8c34fc33",
+              "id": "aaec3f22c391811952f80fcf67149791853ae84afe5f063edde0309e8c34fc33",
+              "packaging": "zip",
+              "sourceHash": "aaec3f22c391811952f80fcf67149791853ae84afe5f063edde0309e8c34fc33",
+              "s3BucketParameter": "AssetParametersaaec3f22c391811952f80fcf67149791853ae84afe5f063edde0309e8c34fc33S3BucketC706A0BF",
+              "s3KeyParameter": "AssetParametersaaec3f22c391811952f80fcf67149791853ae84afe5f063edde0309e8c34fc33S3VersionKey38340386",
+              "artifactHashParameter": "AssetParametersaaec3f22c391811952f80fcf67149791853ae84afe5f063edde0309e8c34fc33ArtifactHash6BCE224C"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\construct-compat.js:416:62)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:180:29)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:86:25)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:90:43)",
+              "new Asset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:43:44)",
+              "AssetCode.bind (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:269:26)",
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:100:33)",
+              "SingletonFunction.ensureLambda (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:153:16)",
+              "new SingletonFunction (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:28:36)",
+              "new CustomResourceS3DeleteObjects (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\cr-s3-delete-objects\\cr-s3-delete-objects.js:16:61)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:37:35)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          },
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.38935c8a301f982f3b09c5cd1fe2f319ffa74e03995915e1b1e31d56a2ebb7b3",
+              "id": "38935c8a301f982f3b09c5cd1fe2f319ffa74e03995915e1b1e31d56a2ebb7b3",
+              "packaging": "zip",
+              "sourceHash": "38935c8a301f982f3b09c5cd1fe2f319ffa74e03995915e1b1e31d56a2ebb7b3",
+              "s3BucketParameter": "AssetParameters38935c8a301f982f3b09c5cd1fe2f319ffa74e03995915e1b1e31d56a2ebb7b3S3BucketAC403C55",
+              "s3KeyParameter": "AssetParameters38935c8a301f982f3b09c5cd1fe2f319ffa74e03995915e1b1e31d56a2ebb7b3S3VersionKey976CE641",
+              "artifactHashParameter": "AssetParameters38935c8a301f982f3b09c5cd1fe2f319ffa74e03995915e1b1e31d56a2ebb7b3ArtifactHash1AEF2CC4"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\construct-compat.js:416:62)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:180:29)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:86:25)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:90:43)",
+              "new Asset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:43:44)",
+              "AssetCode.bind (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:269:26)",
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:100:33)",
+              "SingletonFunction.ensureLambda (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:153:16)",
+              "new SingletonFunction (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:28:36)",
+              "new CustomResourceIoTThingCertPolicy (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\cr-create-iot-thing-cert-policy\\cr-iot-thing-cert-policy.js:16:61)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:61:31)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          },
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.8c0bf79539a0772ae67ce51b1af8dd3589408ca8f94e035e08af2c286b764f0b",
+              "id": "8c0bf79539a0772ae67ce51b1af8dd3589408ca8f94e035e08af2c286b764f0b",
+              "packaging": "zip",
+              "sourceHash": "8c0bf79539a0772ae67ce51b1af8dd3589408ca8f94e035e08af2c286b764f0b",
+              "s3BucketParameter": "AssetParameters8c0bf79539a0772ae67ce51b1af8dd3589408ca8f94e035e08af2c286b764f0bS3Bucket949C14D2",
+              "s3KeyParameter": "AssetParameters8c0bf79539a0772ae67ce51b1af8dd3589408ca8f94e035e08af2c286b764f0bS3VersionKeyFEC001BD",
+              "artifactHashParameter": "AssetParameters8c0bf79539a0772ae67ce51b1af8dd3589408ca8f94e035e08af2c286b764f0bArtifactHash5BDF7844"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\construct-compat.js:416:62)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:180:29)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:86:25)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:90:43)",
+              "new Asset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:43:44)",
+              "AssetCode.bind (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:269:26)",
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:100:33)",
+              "SingletonFunction.ensureLambda (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:153:16)",
+              "new SingletonFunction (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:28:36)",
+              "new CustomResourceGreengrassServiceRole (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\cr-greengrass-service-role\\cr-greengrass-service-role.js:16:61)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:82:31)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          },
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.1a9999108cb9a97db23b62b6a6e70cd7ed275f3927dc68e3e003ec9fd034e97f",
+              "id": "1a9999108cb9a97db23b62b6a6e70cd7ed275f3927dc68e3e003ec9fd034e97f",
+              "packaging": "zip",
+              "sourceHash": "1a9999108cb9a97db23b62b6a6e70cd7ed275f3927dc68e3e003ec9fd034e97f",
+              "s3BucketParameter": "AssetParameters1a9999108cb9a97db23b62b6a6e70cd7ed275f3927dc68e3e003ec9fd034e97fS3Bucket7266B88C",
+              "s3KeyParameter": "AssetParameters1a9999108cb9a97db23b62b6a6e70cd7ed275f3927dc68e3e003ec9fd034e97fS3VersionKey36DB115E",
+              "artifactHashParameter": "AssetParameters1a9999108cb9a97db23b62b6a6e70cd7ed275f3927dc68e3e003ec9fd034e97fArtifactHash41D650B3"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\construct-compat.js:416:62)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:180:29)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:86:25)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:90:43)",
+              "new Asset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:43:44)",
+              "AssetCode.bind (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:269:26)",
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:100:33)",
+              "new GreengrassLambdaSensorSource (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\lambda-gg-sensor-source\\lambda-gg-sensor-source.js:10:34)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:126:38)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          },
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.5a8dbcac5919f2c70ce85467237d6f7b3d4af9b99587efb62290cb8704bdba44",
+              "id": "5a8dbcac5919f2c70ce85467237d6f7b3d4af9b99587efb62290cb8704bdba44",
+              "packaging": "zip",
+              "sourceHash": "5a8dbcac5919f2c70ce85467237d6f7b3d4af9b99587efb62290cb8704bdba44",
+              "s3BucketParameter": "AssetParameters5a8dbcac5919f2c70ce85467237d6f7b3d4af9b99587efb62290cb8704bdba44S3Bucket1C66E62E",
+              "s3KeyParameter": "AssetParameters5a8dbcac5919f2c70ce85467237d6f7b3d4af9b99587efb62290cb8704bdba44S3VersionKey5AF3969D",
+              "artifactHashParameter": "AssetParameters5a8dbcac5919f2c70ce85467237d6f7b3d4af9b99587efb62290cb8704bdba44ArtifactHashA22B2F8E"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\construct-compat.js:416:62)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:180:29)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:86:25)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:90:43)",
+              "new Asset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:43:44)",
+              "AssetCode.bind (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:269:26)",
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:100:33)",
+              "new GreengrassLambdaStreamProducer (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\lambda-gg-stream-producer\\lambda-gg-stream-producer.js:10:34)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:130:40)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          },
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.19c29402bb1437fc0ad6277f1054c41f4bb1fc15c9a053394660ac3ecd7e953a",
+              "id": "19c29402bb1437fc0ad6277f1054c41f4bb1fc15c9a053394660ac3ecd7e953a",
+              "packaging": "zip",
+              "sourceHash": "19c29402bb1437fc0ad6277f1054c41f4bb1fc15c9a053394660ac3ecd7e953a",
+              "s3BucketParameter": "AssetParameters19c29402bb1437fc0ad6277f1054c41f4bb1fc15c9a053394660ac3ecd7e953aS3Bucket69E662FC",
+              "s3KeyParameter": "AssetParameters19c29402bb1437fc0ad6277f1054c41f4bb1fc15c9a053394660ac3ecd7e953aS3VersionKey755A9773",
+              "artifactHashParameter": "AssetParameters19c29402bb1437fc0ad6277f1054c41f4bb1fc15c9a053394660ac3ecd7e953aArtifactHashE1C45A0F"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\construct-compat.js:416:62)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:180:29)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:86:25)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:90:43)",
+              "new Asset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:43:44)",
+              "AssetCode.bind (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:269:26)",
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:100:33)",
+              "new GreengrassLambdaStreamAggregator (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\lambda-gg-stream-aggregator\\lambda-gg-stream-aggregator.js:10:34)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:134:42)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          },
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.53c586a58db02a5728a8bc66737963be156b422cf55a6dfe3920c8e019a886de",
+              "id": "53c586a58db02a5728a8bc66737963be156b422cf55a6dfe3920c8e019a886de",
+              "packaging": "zip",
+              "sourceHash": "53c586a58db02a5728a8bc66737963be156b422cf55a6dfe3920c8e019a886de",
+              "s3BucketParameter": "AssetParameters53c586a58db02a5728a8bc66737963be156b422cf55a6dfe3920c8e019a886deS3BucketDD0989CD",
+              "s3KeyParameter": "AssetParameters53c586a58db02a5728a8bc66737963be156b422cf55a6dfe3920c8e019a886deS3VersionKey34A621A5",
+              "artifactHashParameter": "AssetParameters53c586a58db02a5728a8bc66737963be156b422cf55a6dfe3920c8e019a886deArtifactHash71AFF246"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\construct-compat.js:416:62)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:180:29)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:86:25)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:90:43)",
+              "new Asset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:43:44)",
+              "AssetCode.bind (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:269:26)",
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:100:33)",
+              "SingletonFunction.ensureLambda (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:153:16)",
+              "new SingletonFunction (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:28:36)",
+              "new CustomResourceGreengrassManageDeployments (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\cr-greengrass-manage-deployments\\cr-greengrass-manage-deployments.js:15:61)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:320:35)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/S3SourceBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "S3SourceBucketE7A60B41",
+            "trace": [
+              "new Bucket (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-s3\\lib\\bucket.js:618:26)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:25:26)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/GreengrassSourceBucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GreengrassSourceBucket",
+            "trace": [
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:32:9)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/DeleteS3Objects/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DeleteS3Objects1E0F7E91",
+            "trace": [
+              "new CustomResource (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\custom-resource.js:32:25)",
+              "new CustomResource (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-cloudformation\\lib\\custom-resource.js:75:9)",
+              "new CustomResourceS3DeleteObjects (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\cr-s3-delete-objects\\cr-s3-delete-objects.js:15:9)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:37:35)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/SingletonLambda936a392b5ba95ceebfe25498d45c1d53/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SingletonLambda936a392b5ba95ceebfe25498d45c1d53ServiceRoleA3F33149",
+            "trace": [
+              "new Role (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:74:22)",
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:82:35)",
+              "SingletonFunction.ensureLambda (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:153:16)",
+              "new SingletonFunction (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:28:36)",
+              "new CustomResourceS3DeleteObjects (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\cr-s3-delete-objects\\cr-s3-delete-objects.js:16:61)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:37:35)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/SingletonLambda936a392b5ba95ceebfe25498d45c1d53/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SingletonLambda936a392b5ba95ceebfe25498d45c1d53ServiceRoleDefaultPolicy2A9F2251",
+            "trace": [
+              "new Policy (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.js:58:26)",
+              "Role.addToPrincipalPolicy (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:213:34)",
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:98:23)",
+              "SingletonFunction.ensureLambda (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:153:16)",
+              "new SingletonFunction (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:28:36)",
+              "new CustomResourceS3DeleteObjects (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\cr-s3-delete-objects\\cr-s3-delete-objects.js:16:61)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:37:35)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/SingletonLambda936a392b5ba95ceebfe25498d45c1d53/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SingletonLambda936a392b5ba95ceebfe25498d45c1d533E61EF12",
+            "trace": [
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:145:26)",
+              "SingletonFunction.ensureLambda (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:153:16)",
+              "new SingletonFunction (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:28:36)",
+              "new CustomResourceS3DeleteObjects (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\cr-s3-delete-objects\\cr-s3-delete-objects.js:16:61)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:37:35)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/AssetParameters/aaec3f22c391811952f80fcf67149791853ae84afe5f063edde0309e8c34fc33/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersaaec3f22c391811952f80fcf67149791853ae84afe5f063edde0309e8c34fc33S3BucketC706A0BF",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:12:36)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:167:22)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:86:25)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:90:43)",
+              "new Asset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:43:44)",
+              "AssetCode.bind (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:269:26)",
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:100:33)",
+              "SingletonFunction.ensureLambda (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:153:16)",
+              "new SingletonFunction (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:28:36)",
+              "new CustomResourceS3DeleteObjects (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\cr-s3-delete-objects\\cr-s3-delete-objects.js:16:61)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:37:35)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/AssetParameters/aaec3f22c391811952f80fcf67149791853ae84afe5f063edde0309e8c34fc33/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersaaec3f22c391811952f80fcf67149791853ae84afe5f063edde0309e8c34fc33S3VersionKey38340386",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:16:35)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:167:22)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:86:25)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:90:43)",
+              "new Asset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:43:44)",
+              "AssetCode.bind (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:269:26)",
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:100:33)",
+              "SingletonFunction.ensureLambda (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:153:16)",
+              "new SingletonFunction (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:28:36)",
+              "new CustomResourceS3DeleteObjects (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\cr-s3-delete-objects\\cr-s3-delete-objects.js:16:61)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:37:35)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/AssetParameters/aaec3f22c391811952f80fcf67149791853ae84afe5f063edde0309e8c34fc33/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersaaec3f22c391811952f80fcf67149791853ae84afe5f063edde0309e8c34fc33ArtifactHash6BCE224C",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:20:38)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:167:22)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:86:25)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:90:43)",
+              "new Asset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:43:44)",
+              "AssetCode.bind (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:269:26)",
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:100:33)",
+              "SingletonFunction.ensureLambda (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:153:16)",
+              "new SingletonFunction (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:28:36)",
+              "new CustomResourceS3DeleteObjects (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\cr-s3-delete-objects\\cr-s3-delete-objects.js:16:61)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:37:35)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/AssetParameters/38935c8a301f982f3b09c5cd1fe2f319ffa74e03995915e1b1e31d56a2ebb7b3/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters38935c8a301f982f3b09c5cd1fe2f319ffa74e03995915e1b1e31d56a2ebb7b3S3BucketAC403C55",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:12:36)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:167:22)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:86:25)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:90:43)",
+              "new Asset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:43:44)",
+              "AssetCode.bind (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:269:26)",
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:100:33)",
+              "SingletonFunction.ensureLambda (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:153:16)",
+              "new SingletonFunction (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:28:36)",
+              "new CustomResourceIoTThingCertPolicy (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\cr-create-iot-thing-cert-policy\\cr-iot-thing-cert-policy.js:16:61)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:61:31)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/AssetParameters/38935c8a301f982f3b09c5cd1fe2f319ffa74e03995915e1b1e31d56a2ebb7b3/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters38935c8a301f982f3b09c5cd1fe2f319ffa74e03995915e1b1e31d56a2ebb7b3S3VersionKey976CE641",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:16:35)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:167:22)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:86:25)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:90:43)",
+              "new Asset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:43:44)",
+              "AssetCode.bind (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:269:26)",
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:100:33)",
+              "SingletonFunction.ensureLambda (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:153:16)",
+              "new SingletonFunction (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:28:36)",
+              "new CustomResourceIoTThingCertPolicy (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\cr-create-iot-thing-cert-policy\\cr-iot-thing-cert-policy.js:16:61)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:61:31)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/AssetParameters/38935c8a301f982f3b09c5cd1fe2f319ffa74e03995915e1b1e31d56a2ebb7b3/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters38935c8a301f982f3b09c5cd1fe2f319ffa74e03995915e1b1e31d56a2ebb7b3ArtifactHash1AEF2CC4",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:20:38)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:167:22)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:86:25)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:90:43)",
+              "new Asset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:43:44)",
+              "AssetCode.bind (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:269:26)",
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:100:33)",
+              "SingletonFunction.ensureLambda (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:153:16)",
+              "new SingletonFunction (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:28:36)",
+              "new CustomResourceIoTThingCertPolicy (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\cr-create-iot-thing-cert-policy\\cr-iot-thing-cert-policy.js:16:61)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:61:31)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/AssetParameters/8c0bf79539a0772ae67ce51b1af8dd3589408ca8f94e035e08af2c286b764f0b/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters8c0bf79539a0772ae67ce51b1af8dd3589408ca8f94e035e08af2c286b764f0bS3Bucket949C14D2",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:12:36)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:167:22)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:86:25)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:90:43)",
+              "new Asset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:43:44)",
+              "AssetCode.bind (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:269:26)",
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:100:33)",
+              "SingletonFunction.ensureLambda (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:153:16)",
+              "new SingletonFunction (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:28:36)",
+              "new CustomResourceGreengrassServiceRole (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\cr-greengrass-service-role\\cr-greengrass-service-role.js:16:61)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:82:31)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/AssetParameters/8c0bf79539a0772ae67ce51b1af8dd3589408ca8f94e035e08af2c286b764f0b/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters8c0bf79539a0772ae67ce51b1af8dd3589408ca8f94e035e08af2c286b764f0bS3VersionKeyFEC001BD",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:16:35)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:167:22)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:86:25)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:90:43)",
+              "new Asset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:43:44)",
+              "AssetCode.bind (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:269:26)",
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:100:33)",
+              "SingletonFunction.ensureLambda (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:153:16)",
+              "new SingletonFunction (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:28:36)",
+              "new CustomResourceGreengrassServiceRole (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\cr-greengrass-service-role\\cr-greengrass-service-role.js:16:61)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:82:31)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/AssetParameters/8c0bf79539a0772ae67ce51b1af8dd3589408ca8f94e035e08af2c286b764f0b/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters8c0bf79539a0772ae67ce51b1af8dd3589408ca8f94e035e08af2c286b764f0bArtifactHash5BDF7844",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:20:38)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:167:22)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:86:25)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:90:43)",
+              "new Asset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:43:44)",
+              "AssetCode.bind (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:269:26)",
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:100:33)",
+              "SingletonFunction.ensureLambda (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:153:16)",
+              "new SingletonFunction (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:28:36)",
+              "new CustomResourceGreengrassServiceRole (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\cr-greengrass-service-role\\cr-greengrass-service-role.js:16:61)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:82:31)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/AssetParameters/1a9999108cb9a97db23b62b6a6e70cd7ed275f3927dc68e3e003ec9fd034e97f/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters1a9999108cb9a97db23b62b6a6e70cd7ed275f3927dc68e3e003ec9fd034e97fS3Bucket7266B88C",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:12:36)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:167:22)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:86:25)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:90:43)",
+              "new Asset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:43:44)",
+              "AssetCode.bind (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:269:26)",
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:100:33)",
+              "new GreengrassLambdaSensorSource (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\lambda-gg-sensor-source\\lambda-gg-sensor-source.js:10:34)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:126:38)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/AssetParameters/1a9999108cb9a97db23b62b6a6e70cd7ed275f3927dc68e3e003ec9fd034e97f/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters1a9999108cb9a97db23b62b6a6e70cd7ed275f3927dc68e3e003ec9fd034e97fS3VersionKey36DB115E",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:16:35)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:167:22)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:86:25)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:90:43)",
+              "new Asset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:43:44)",
+              "AssetCode.bind (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:269:26)",
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:100:33)",
+              "new GreengrassLambdaSensorSource (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\lambda-gg-sensor-source\\lambda-gg-sensor-source.js:10:34)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:126:38)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/AssetParameters/1a9999108cb9a97db23b62b6a6e70cd7ed275f3927dc68e3e003ec9fd034e97f/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters1a9999108cb9a97db23b62b6a6e70cd7ed275f3927dc68e3e003ec9fd034e97fArtifactHash41D650B3",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:20:38)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:167:22)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:86:25)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:90:43)",
+              "new Asset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:43:44)",
+              "AssetCode.bind (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:269:26)",
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:100:33)",
+              "new GreengrassLambdaSensorSource (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\lambda-gg-sensor-source\\lambda-gg-sensor-source.js:10:34)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:126:38)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/AssetParameters/5a8dbcac5919f2c70ce85467237d6f7b3d4af9b99587efb62290cb8704bdba44/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters5a8dbcac5919f2c70ce85467237d6f7b3d4af9b99587efb62290cb8704bdba44S3Bucket1C66E62E",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:12:36)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:167:22)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:86:25)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:90:43)",
+              "new Asset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:43:44)",
+              "AssetCode.bind (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:269:26)",
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:100:33)",
+              "new GreengrassLambdaStreamProducer (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\lambda-gg-stream-producer\\lambda-gg-stream-producer.js:10:34)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:130:40)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/AssetParameters/5a8dbcac5919f2c70ce85467237d6f7b3d4af9b99587efb62290cb8704bdba44/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters5a8dbcac5919f2c70ce85467237d6f7b3d4af9b99587efb62290cb8704bdba44S3VersionKey5AF3969D",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:16:35)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:167:22)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:86:25)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:90:43)",
+              "new Asset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:43:44)",
+              "AssetCode.bind (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:269:26)",
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:100:33)",
+              "new GreengrassLambdaStreamProducer (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\lambda-gg-stream-producer\\lambda-gg-stream-producer.js:10:34)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:130:40)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/AssetParameters/5a8dbcac5919f2c70ce85467237d6f7b3d4af9b99587efb62290cb8704bdba44/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters5a8dbcac5919f2c70ce85467237d6f7b3d4af9b99587efb62290cb8704bdba44ArtifactHashA22B2F8E",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:20:38)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:167:22)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:86:25)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:90:43)",
+              "new Asset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:43:44)",
+              "AssetCode.bind (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:269:26)",
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:100:33)",
+              "new GreengrassLambdaStreamProducer (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\lambda-gg-stream-producer\\lambda-gg-stream-producer.js:10:34)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:130:40)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/AssetParameters/19c29402bb1437fc0ad6277f1054c41f4bb1fc15c9a053394660ac3ecd7e953a/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters19c29402bb1437fc0ad6277f1054c41f4bb1fc15c9a053394660ac3ecd7e953aS3Bucket69E662FC",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:12:36)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:167:22)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:86:25)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:90:43)",
+              "new Asset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:43:44)",
+              "AssetCode.bind (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:269:26)",
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:100:33)",
+              "new GreengrassLambdaStreamAggregator (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\lambda-gg-stream-aggregator\\lambda-gg-stream-aggregator.js:10:34)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:134:42)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/AssetParameters/19c29402bb1437fc0ad6277f1054c41f4bb1fc15c9a053394660ac3ecd7e953a/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters19c29402bb1437fc0ad6277f1054c41f4bb1fc15c9a053394660ac3ecd7e953aS3VersionKey755A9773",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:16:35)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:167:22)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:86:25)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:90:43)",
+              "new Asset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:43:44)",
+              "AssetCode.bind (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:269:26)",
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:100:33)",
+              "new GreengrassLambdaStreamAggregator (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\lambda-gg-stream-aggregator\\lambda-gg-stream-aggregator.js:10:34)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:134:42)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/AssetParameters/19c29402bb1437fc0ad6277f1054c41f4bb1fc15c9a053394660ac3ecd7e953a/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters19c29402bb1437fc0ad6277f1054c41f4bb1fc15c9a053394660ac3ecd7e953aArtifactHashE1C45A0F",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:20:38)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:167:22)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:86:25)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:90:43)",
+              "new Asset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:43:44)",
+              "AssetCode.bind (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:269:26)",
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:100:33)",
+              "new GreengrassLambdaStreamAggregator (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\lambda-gg-stream-aggregator\\lambda-gg-stream-aggregator.js:10:34)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:134:42)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/AssetParameters/53c586a58db02a5728a8bc66737963be156b422cf55a6dfe3920c8e019a886de/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters53c586a58db02a5728a8bc66737963be156b422cf55a6dfe3920c8e019a886deS3BucketDD0989CD",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:12:36)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:167:22)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:86:25)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:90:43)",
+              "new Asset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:43:44)",
+              "AssetCode.bind (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:269:26)",
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:100:33)",
+              "SingletonFunction.ensureLambda (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:153:16)",
+              "new SingletonFunction (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:28:36)",
+              "new CustomResourceGreengrassManageDeployments (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\cr-greengrass-manage-deployments\\cr-greengrass-manage-deployments.js:15:61)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:320:35)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/AssetParameters/53c586a58db02a5728a8bc66737963be156b422cf55a6dfe3920c8e019a886de/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters53c586a58db02a5728a8bc66737963be156b422cf55a6dfe3920c8e019a886deS3VersionKey34A621A5",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:16:35)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:167:22)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:86:25)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:90:43)",
+              "new Asset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:43:44)",
+              "AssetCode.bind (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:269:26)",
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:100:33)",
+              "SingletonFunction.ensureLambda (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:153:16)",
+              "new SingletonFunction (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:28:36)",
+              "new CustomResourceGreengrassManageDeployments (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\cr-greengrass-manage-deployments\\cr-greengrass-manage-deployments.js:15:61)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:320:35)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/AssetParameters/53c586a58db02a5728a8bc66737963be156b422cf55a6dfe3920c8e019a886de/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters53c586a58db02a5728a8bc66737963be156b422cf55a6dfe3920c8e019a886deArtifactHash71AFF246",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.js:20:38)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:167:22)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:86:25)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.js:90:43)",
+              "new Asset (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.js:43:44)",
+              "AssetCode.bind (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.js:269:26)",
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:100:33)",
+              "SingletonFunction.ensureLambda (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:153:16)",
+              "new SingletonFunction (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:28:36)",
+              "new CustomResourceGreengrassManageDeployments (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\cr-greengrass-manage-deployments\\cr-greengrass-manage-deployments.js:15:61)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:320:35)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/IotAnalyticsStack/Channel": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IotAnalyticsStackChannelD9E3DFA2",
+            "trace": [
+              "new IoTAnalytics (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\iot-analytics\\iot-analytics.js:9:25)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:48:34)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/IotAnalyticsStack/Datastore": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IotAnalyticsStackDatastore134FBF85",
+            "trace": [
+              "new IoTAnalytics (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\iot-analytics\\iot-analytics.js:14:27)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:48:34)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/IotAnalyticsStack/Pipeline": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IotAnalyticsStackPipelineA100C45C",
+            "trace": [
+              "new IoTAnalytics (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\iot-analytics\\iot-analytics.js:17:26)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:48:34)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/IotAnalyticsStack/SqlDataset": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IotAnalyticsStackSqlDataset1134A62A",
+            "trace": [
+              "new IoTAnalytics (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\iot-analytics\\iot-analytics.js:35:27)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:48:34)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/KinesisStream/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KinesisStream46752A3E",
+            "trace": [
+              "new Stream (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-kinesis\\lib\\stream.js:390:23)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:57:31)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/AwsCdkKinesisEncryptedStreamsUnsupportedRegions": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AwsCdkKinesisEncryptedStreamsUnsupportedRegions",
+            "trace": [
+              "Stream.parseEncryption (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-kinesis\\lib\\stream.js:447:17)",
+              "new Stream (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-kinesis\\lib\\stream.js:389:58)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:57:31)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/CreateThingCertPolicyCustomResource/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CreateThingCertPolicyCustomResourceFE72F68F",
+            "trace": [
+              "new CustomResource (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\custom-resource.js:32:25)",
+              "new CustomResource (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-cloudformation\\lib\\custom-resource.js:75:9)",
+              "new CustomResourceIoTThingCertPolicy (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\cr-create-iot-thing-cert-policy\\cr-iot-thing-cert-policy.js:15:26)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:61:31)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/SingletonLambda07d57a889b7954fb9cea72c823e7cc6c/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SingletonLambda07d57a889b7954fb9cea72c823e7cc6cServiceRole8F49F508",
+            "trace": [
+              "new Role (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:74:22)",
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:82:35)",
+              "SingletonFunction.ensureLambda (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:153:16)",
+              "new SingletonFunction (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:28:36)",
+              "new CustomResourceIoTThingCertPolicy (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\cr-create-iot-thing-cert-policy\\cr-iot-thing-cert-policy.js:16:61)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:61:31)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/SingletonLambda07d57a889b7954fb9cea72c823e7cc6c/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SingletonLambda07d57a889b7954fb9cea72c823e7cc6cServiceRoleDefaultPolicy183D06C5",
+            "trace": [
+              "new Policy (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.js:58:26)",
+              "Role.addToPrincipalPolicy (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:213:34)",
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:98:23)",
+              "SingletonFunction.ensureLambda (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:153:16)",
+              "new SingletonFunction (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:28:36)",
+              "new CustomResourceIoTThingCertPolicy (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\cr-create-iot-thing-cert-policy\\cr-iot-thing-cert-policy.js:16:61)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:61:31)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/SingletonLambda07d57a889b7954fb9cea72c823e7cc6c/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SingletonLambda07d57a889b7954fb9cea72c823e7cc6c312F85E6",
+            "trace": [
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:145:26)",
+              "SingletonFunction.ensureLambda (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:153:16)",
+              "new SingletonFunction (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:28:36)",
+              "new CustomResourceIoTThingCertPolicy (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\cr-create-iot-thing-cert-policy\\cr-iot-thing-cert-policy.js:16:61)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:61:31)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/CertificatePEM": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CertificatePEM",
+            "trace": [
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:65:9)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/PrivateKeyPEM": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PrivateKeyPEM",
+            "trace": [
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:69:9)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/ThingArn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ThingArn",
+            "trace": [
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:73:9)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/EndpointDataAts": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "EndpointDataAts",
+            "trace": [
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:77:9)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/GreengrassRoleCustomResource/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GreengrassRoleCustomResource21FB6A40",
+            "trace": [
+              "new CustomResource (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\custom-resource.js:32:25)",
+              "new CustomResource (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-cloudformation\\lib\\custom-resource.js:75:9)",
+              "new CustomResourceGreengrassServiceRole (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\cr-greengrass-service-role\\cr-greengrass-service-role.js:15:26)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:82:31)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/SingletonLambdabe002b3b58f75d3f9d62357cbfba03f8/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SingletonLambdabe002b3b58f75d3f9d62357cbfba03f8ServiceRole874A8EB6",
+            "trace": [
+              "new Role (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:74:22)",
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:82:35)",
+              "SingletonFunction.ensureLambda (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:153:16)",
+              "new SingletonFunction (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:28:36)",
+              "new CustomResourceGreengrassServiceRole (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\cr-greengrass-service-role\\cr-greengrass-service-role.js:16:61)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:82:31)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/SingletonLambdabe002b3b58f75d3f9d62357cbfba03f8/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SingletonLambdabe002b3b58f75d3f9d62357cbfba03f8ServiceRoleDefaultPolicy923B4302",
+            "trace": [
+              "new Policy (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.js:58:26)",
+              "Role.addToPrincipalPolicy (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:213:34)",
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:98:23)",
+              "SingletonFunction.ensureLambda (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:153:16)",
+              "new SingletonFunction (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:28:36)",
+              "new CustomResourceGreengrassServiceRole (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\cr-greengrass-service-role\\cr-greengrass-service-role.js:16:61)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:82:31)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/SingletonLambdabe002b3b58f75d3f9d62357cbfba03f8/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SingletonLambdabe002b3b58f75d3f9d62357cbfba03f873D1BC02",
+            "trace": [
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:145:26)",
+              "SingletonFunction.ensureLambda (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:153:16)",
+              "new SingletonFunction (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:28:36)",
+              "new CustomResourceGreengrassServiceRole (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\cr-greengrass-service-role\\cr-greengrass-service-role.js:16:61)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:82:31)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/GreengrassLambdaSensorSource/greengrass-stream-mgr-accel-SensorSource/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GreengrassLambdaSensorSourcegreengrassstreammgraccelSensorSourceServiceRole3F332B4B",
+            "trace": [
+              "new Role (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:74:22)",
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:82:35)",
+              "new GreengrassLambdaSensorSource (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\lambda-gg-sensor-source\\lambda-gg-sensor-source.js:10:34)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:126:38)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/GreengrassLambdaSensorSource/greengrass-stream-mgr-accel-SensorSource/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GreengrassLambdaSensorSourcegreengrassstreammgraccelSensorSource9599A3C8",
+            "trace": [
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:145:26)",
+              "new GreengrassLambdaSensorSource (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\lambda-gg-sensor-source\\lambda-gg-sensor-source.js:10:34)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:126:38)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/GreengrassLambdaSensorSource/greengrass-stream-mgr-accel-SensorSource/VersionFunctionVersionPlaceholder/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GreengrassLambdaSensorSourcegreengrassstreammgraccelSensorSourceVersionFunctionVersionPlaceholderB866C501",
+            "trace": [
+              "new Version (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\lambda-version.js:47:25)",
+              "Function.addVersion (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:471:16)",
+              "new GreengrassLambdaSensorSource (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\lambda-gg-sensor-source\\lambda-gg-sensor-source.js:16:42)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:126:38)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/GreengrassLambdaSensorSource/greengrass-stream-mgr-accel-GreengrassSampleAlias/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GreengrassLambdaSensorSourcegreengrassstreammgraccelGreengrassSampleAlias00671FA5",
+            "trace": [
+              "new Alias (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\alias.js:40:23)",
+              "new GreengrassLambdaSensorSource (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\lambda-gg-sensor-source\\lambda-gg-sensor-source.js:18:38)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:126:38)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/GreengrassLambdaStreamProducer/greengrass-stream-mgr-accel-StreamProducer/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GreengrassLambdaStreamProducergreengrassstreammgraccelStreamProducerServiceRoleE5D4EF28",
+            "trace": [
+              "new Role (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:74:22)",
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:82:35)",
+              "new GreengrassLambdaStreamProducer (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\lambda-gg-stream-producer\\lambda-gg-stream-producer.js:10:34)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:130:40)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/GreengrassLambdaStreamProducer/greengrass-stream-mgr-accel-StreamProducer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GreengrassLambdaStreamProducergreengrassstreammgraccelStreamProducer542E0133",
+            "trace": [
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:145:26)",
+              "new GreengrassLambdaStreamProducer (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\lambda-gg-stream-producer\\lambda-gg-stream-producer.js:10:34)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:130:40)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/GreengrassLambdaStreamProducer/greengrass-stream-mgr-accel-StreamProducer/VersionFunctionVersionPlaceholder/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GreengrassLambdaStreamProducergreengrassstreammgraccelStreamProducerVersionFunctionVersionPlaceholder36DD458C",
+            "trace": [
+              "new Version (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\lambda-version.js:47:25)",
+              "Function.addVersion (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:471:16)",
+              "new GreengrassLambdaStreamProducer (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\lambda-gg-stream-producer\\lambda-gg-stream-producer.js:16:42)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:130:40)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/GreengrassLambdaStreamProducer/greengrass-stream-mgr-accel-GreengrassSampleAlias/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GreengrassLambdaStreamProducergreengrassstreammgraccelGreengrassSampleAlias57EC18A8",
+            "trace": [
+              "new Alias (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\alias.js:40:23)",
+              "new GreengrassLambdaStreamProducer (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\lambda-gg-stream-producer\\lambda-gg-stream-producer.js:18:38)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:130:40)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/GreengrassLambdaStreamAggregator/greengrass-stream-mgr-accel-StreamAggregator/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GreengrassLambdaStreamAggregatorgreengrassstreammgraccelStreamAggregatorServiceRoleFD2E789A",
+            "trace": [
+              "new Role (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:74:22)",
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:82:35)",
+              "new GreengrassLambdaStreamAggregator (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\lambda-gg-stream-aggregator\\lambda-gg-stream-aggregator.js:10:34)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:134:42)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/GreengrassLambdaStreamAggregator/greengrass-stream-mgr-accel-StreamAggregator/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GreengrassLambdaStreamAggregatorgreengrassstreammgraccelStreamAggregator910A3689",
+            "trace": [
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:145:26)",
+              "new GreengrassLambdaStreamAggregator (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\lambda-gg-stream-aggregator\\lambda-gg-stream-aggregator.js:10:34)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:134:42)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/GreengrassLambdaStreamAggregator/greengrass-stream-mgr-accel-StreamAggregator/VersionFunctionVersionPlaceholder/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GreengrassLambdaStreamAggregatorgreengrassstreammgraccelStreamAggregatorVersionFunctionVersionPlaceholder05F4D87B",
+            "trace": [
+              "new Version (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\lambda-version.js:47:25)",
+              "Function.addVersion (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:471:16)",
+              "new GreengrassLambdaStreamAggregator (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\lambda-gg-stream-aggregator\\lambda-gg-stream-aggregator.js:16:42)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:134:42)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/GreengrassLambdaStreamAggregator/greengrass-stream-mgr-accel-GreengrassSampleAlias/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GreengrassLambdaStreamAggregatorgreengrassstreammgraccelGreengrassSampleAliasFBB7141A",
+            "trace": [
+              "new Alias (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\alias.js:40:23)",
+              "new GreengrassLambdaStreamAggregator (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\lambda-gg-stream-aggregator\\lambda-gg-stream-aggregator.js:18:38)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:134:42)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/CoreDefinition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CoreDefinition",
+            "trace": [
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:142:32)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/FunctionDefinition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FunctionDefinition",
+            "trace": [
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:156:36)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/FunctionDefinitionVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "FunctionDefinitionVersion",
+            "trace": [
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:162:43)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/ConnectorDefinition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ConnectorDefinition",
+            "trace": [
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:228:37)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/SubscriptionDefinition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptionDefinition",
+            "trace": [
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:246:40)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/LoggerDefinition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LoggerDefinition",
+            "trace": [
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:267:34)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/GreengrassGroup": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GreengrassGroup",
+            "trace": [
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:302:33)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/GreengrassGroupVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GreengrassGroupVersion",
+            "trace": [
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:307:40)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/GreengrassManageDeploymentsResource/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GreengrassManageDeploymentsResourceDEDD7338",
+            "trace": [
+              "new CustomResource (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\custom-resource.js:32:25)",
+              "new CustomResource (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-cloudformation\\lib\\custom-resource.js:75:9)",
+              "new CustomResourceGreengrassManageDeployments (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\cr-greengrass-manage-deployments\\cr-greengrass-manage-deployments.js:14:9)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:320:35)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/SingletonLambda618d0fcd95f95ad490d8f5db6fc0c9c3/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SingletonLambda618d0fcd95f95ad490d8f5db6fc0c9c3ServiceRole2B64E1BD",
+            "trace": [
+              "new Role (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:74:22)",
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:82:35)",
+              "SingletonFunction.ensureLambda (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:153:16)",
+              "new SingletonFunction (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:28:36)",
+              "new CustomResourceGreengrassManageDeployments (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\cr-greengrass-manage-deployments\\cr-greengrass-manage-deployments.js:15:61)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:320:35)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/SingletonLambda618d0fcd95f95ad490d8f5db6fc0c9c3/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SingletonLambda618d0fcd95f95ad490d8f5db6fc0c9c3ServiceRoleDefaultPolicy4E549AB6",
+            "trace": [
+              "new Policy (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.js:58:26)",
+              "Role.addToPrincipalPolicy (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.js:213:34)",
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:98:23)",
+              "SingletonFunction.ensureLambda (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:153:16)",
+              "new SingletonFunction (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:28:36)",
+              "new CustomResourceGreengrassManageDeployments (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\cr-greengrass-manage-deployments\\cr-greengrass-manage-deployments.js:15:61)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:320:35)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/SingletonLambda618d0fcd95f95ad490d8f5db6fc0c9c3/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SingletonLambda618d0fcd95f95ad490d8f5db6fc0c9c301C7FFCF",
+            "trace": [
+              "new Function (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.js:145:26)",
+              "SingletonFunction.ensureLambda (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:153:16)",
+              "new SingletonFunction (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\aws-lambda\\lib\\singleton-lambda.js:28:36)",
+              "new CustomResourceGreengrassManageDeployments (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\cr-greengrass-manage-deployments\\cr-greengrass-manage-deployments.js:15:61)",
+              "new GreengrassStreamManagerStack (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:320:35)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:333:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/greengrass-stream-mgr-accel/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\metadata-resource.js:22:30)",
+              "C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:139:9",
+              "visit (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:200:9)",
+              "visit (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:197:9)",
+              "injectMetadataResources (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:128:5)",
+              "Object.synthesize (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.js:17:5)",
+              "App.synth (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\node_modules\\@aws-cdk\\core\\lib\\stage.js:103:41)",
+              "Object.<anonymous> (C:\\Users\\AsusROG\\workspace\\gg\\aws-iot-greengrass-accelerators\\v1\\stream_manager\\cdk\\index.js:339:5)",
+              "Module._compile (node:internal/modules/cjs/loader:1105:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ]
+      },
+      "displayName": "greengrass-stream-mgr-accel"
+    }
+  }
+}

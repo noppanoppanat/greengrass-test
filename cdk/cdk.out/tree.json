@@ -1,0 +1,2481 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree",
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Construct",
+          "version": "1.135.0"
+        }
+      },
+      "greengrass-stream-mgr-accel": {
+        "id": "greengrass-stream-mgr-accel",
+        "path": "greengrass-stream-mgr-accel",
+        "children": {
+          "S3SourceBucket": {
+            "id": "S3SourceBucket",
+            "path": "greengrass-stream-mgr-accel/S3SourceBucket",
+            "children": {
+              "Notifications": {
+                "id": "Notifications",
+                "path": "greengrass-stream-mgr-accel/S3SourceBucket/Notifications",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Construct",
+                  "version": "1.135.0"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "greengrass-stream-mgr-accel/S3SourceBucket/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
+                  "aws:cdk:cloudformation:props": {
+                    "bucketName": "greengrass-stream-mgr-accel-greengrass-source-us-west-2",
+                    "publicAccessBlockConfiguration": {
+                      "blockPublicAcls": true,
+                      "blockPublicPolicy": true,
+                      "ignorePublicAcls": true,
+                      "restrictPublicBuckets": true
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-s3.CfnBucket",
+                  "version": "1.135.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-s3.Bucket",
+              "version": "1.135.0"
+            }
+          },
+          "GreengrassSourceBucket": {
+            "id": "GreengrassSourceBucket",
+            "path": "greengrass-stream-mgr-accel/GreengrassSourceBucket",
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.CfnOutput",
+              "version": "1.135.0"
+            }
+          },
+          "DeleteS3Objects": {
+            "id": "DeleteS3Objects",
+            "path": "greengrass-stream-mgr-accel/DeleteS3Objects",
+            "children": {
+              "Singleton": {
+                "id": "Singleton",
+                "path": "greengrass-stream-mgr-accel/DeleteS3Objects/Singleton",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-lambda.SingletonFunction",
+                  "version": "1.135.0"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "greengrass-stream-mgr-accel/DeleteS3Objects/Resource",
+                "children": {
+                  "Default": {
+                    "id": "Default",
+                    "path": "greengrass-stream-mgr-accel/DeleteS3Objects/Resource/Default",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnResource",
+                      "version": "1.135.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-cloudformation.CustomResource",
+                  "version": "1.135.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.135.0"
+            }
+          },
+          "SingletonLambda936a392b5ba95ceebfe25498d45c1d53": {
+            "id": "SingletonLambda936a392b5ba95ceebfe25498d45c1d53",
+            "path": "greengrass-stream-mgr-accel/SingletonLambda936a392b5ba95ceebfe25498d45c1d53",
+            "children": {
+              "ServiceRole": {
+                "id": "ServiceRole",
+                "path": "greengrass-stream-mgr-accel/SingletonLambda936a392b5ba95ceebfe25498d45c1d53/ServiceRole",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "greengrass-stream-mgr-accel/SingletonLambda936a392b5ba95ceebfe25498d45c1d53/ServiceRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "lambda.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "managedPolicyArns": [
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.CfnRole",
+                      "version": "1.135.0"
+                    }
+                  },
+                  "DefaultPolicy": {
+                    "id": "DefaultPolicy",
+                    "path": "greengrass-stream-mgr-accel/SingletonLambda936a392b5ba95ceebfe25498d45c1d53/ServiceRole/DefaultPolicy",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "greengrass-stream-mgr-accel/SingletonLambda936a392b5ba95ceebfe25498d45c1d53/ServiceRole/DefaultPolicy/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                          "aws:cdk:cloudformation:props": {
+                            "policyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": [
+                                    "s3:ListBucket",
+                                    "s3:ListBucketMultipartUploads",
+                                    "s3:ListBucketVersions",
+                                    "s3:DeleteBucket"
+                                  ],
+                                  "Effect": "Allow",
+                                  "Resource": {
+                                    "Fn::Join": [
+                                      "",
+                                      [
+                                        "arn:aws:s3:::",
+                                        {
+                                          "Ref": "S3SourceBucketE7A60B41"
+                                        }
+                                      ]
+                                    ]
+                                  }
+                                },
+                                {
+                                  "Action": [
+                                    "s3:List*",
+                                    "s3:DeleteObject",
+                                    "s3:DeleteObjectVersion"
+                                  ],
+                                  "Effect": "Allow",
+                                  "Resource": {
+                                    "Fn::Join": [
+                                      "",
+                                      [
+                                        "arn:aws:s3:::",
+                                        {
+                                          "Ref": "S3SourceBucketE7A60B41"
+                                        },
+                                        "/*"
+                                      ]
+                                    ]
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "policyName": "SingletonLambda936a392b5ba95ceebfe25498d45c1d53ServiceRoleDefaultPolicy2A9F2251",
+                            "roles": [
+                              {
+                                "Ref": "SingletonLambda936a392b5ba95ceebfe25498d45c1d53ServiceRoleA3F33149"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-iam.CfnPolicy",
+                          "version": "1.135.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.Policy",
+                      "version": "1.135.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iam.Role",
+                  "version": "1.135.0"
+                }
+              },
+              "Code": {
+                "id": "Code",
+                "path": "greengrass-stream-mgr-accel/SingletonLambda936a392b5ba95ceebfe25498d45c1d53/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "greengrass-stream-mgr-accel/SingletonLambda936a392b5ba95ceebfe25498d45c1d53/Code/Stage",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.AssetStaging",
+                      "version": "1.135.0"
+                    }
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "greengrass-stream-mgr-accel/SingletonLambda936a392b5ba95ceebfe25498d45c1d53/Code/AssetBucket",
+                    "children": {
+                      "Notifications": {
+                        "id": "Notifications",
+                        "path": "greengrass-stream-mgr-accel/SingletonLambda936a392b5ba95ceebfe25498d45c1d53/Code/AssetBucket/Notifications",
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/core.Construct",
+                          "version": "1.135.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-s3.BucketBase",
+                      "version": "1.135.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-s3-assets.Asset",
+                  "version": "1.135.0"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "greengrass-stream-mgr-accel/SingletonLambda936a392b5ba95ceebfe25498d45c1d53/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "code": {
+                      "s3Bucket": {
+                        "Ref": "AssetParametersaaec3f22c391811952f80fcf67149791853ae84afe5f063edde0309e8c34fc33S3BucketC706A0BF"
+                      },
+                      "s3Key": {
+                        "Fn::Join": [
+                          "",
+                          [
+                            {
+                              "Fn::Select": [
+                                0,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParametersaaec3f22c391811952f80fcf67149791853ae84afe5f063edde0309e8c34fc33S3VersionKey38340386"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Fn::Select": [
+                                1,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParametersaaec3f22c391811952f80fcf67149791853ae84afe5f063edde0309e8c34fc33S3VersionKey38340386"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "role": {
+                      "Fn::GetAtt": [
+                        "SingletonLambda936a392b5ba95ceebfe25498d45c1d53ServiceRoleA3F33149",
+                        "Arn"
+                      ]
+                    },
+                    "functionName": "greengrass-stream-mgr-accel-S3DeleteObjects",
+                    "handler": "index.main",
+                    "runtime": "python3.8",
+                    "timeout": 30
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-lambda.CfnFunction",
+                  "version": "1.135.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-lambda.Function",
+              "version": "1.135.0"
+            }
+          },
+          "AssetParameters": {
+            "id": "AssetParameters",
+            "path": "greengrass-stream-mgr-accel/AssetParameters",
+            "children": {
+              "aaec3f22c391811952f80fcf67149791853ae84afe5f063edde0309e8c34fc33": {
+                "id": "aaec3f22c391811952f80fcf67149791853ae84afe5f063edde0309e8c34fc33",
+                "path": "greengrass-stream-mgr-accel/AssetParameters/aaec3f22c391811952f80fcf67149791853ae84afe5f063edde0309e8c34fc33",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "greengrass-stream-mgr-accel/AssetParameters/aaec3f22c391811952f80fcf67149791853ae84afe5f063edde0309e8c34fc33/S3Bucket",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.135.0"
+                    }
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "greengrass-stream-mgr-accel/AssetParameters/aaec3f22c391811952f80fcf67149791853ae84afe5f063edde0309e8c34fc33/S3VersionKey",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.135.0"
+                    }
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "greengrass-stream-mgr-accel/AssetParameters/aaec3f22c391811952f80fcf67149791853ae84afe5f063edde0309e8c34fc33/ArtifactHash",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.135.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Construct",
+                  "version": "1.135.0"
+                }
+              },
+              "38935c8a301f982f3b09c5cd1fe2f319ffa74e03995915e1b1e31d56a2ebb7b3": {
+                "id": "38935c8a301f982f3b09c5cd1fe2f319ffa74e03995915e1b1e31d56a2ebb7b3",
+                "path": "greengrass-stream-mgr-accel/AssetParameters/38935c8a301f982f3b09c5cd1fe2f319ffa74e03995915e1b1e31d56a2ebb7b3",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "greengrass-stream-mgr-accel/AssetParameters/38935c8a301f982f3b09c5cd1fe2f319ffa74e03995915e1b1e31d56a2ebb7b3/S3Bucket",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.135.0"
+                    }
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "greengrass-stream-mgr-accel/AssetParameters/38935c8a301f982f3b09c5cd1fe2f319ffa74e03995915e1b1e31d56a2ebb7b3/S3VersionKey",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.135.0"
+                    }
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "greengrass-stream-mgr-accel/AssetParameters/38935c8a301f982f3b09c5cd1fe2f319ffa74e03995915e1b1e31d56a2ebb7b3/ArtifactHash",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.135.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Construct",
+                  "version": "1.135.0"
+                }
+              },
+              "8c0bf79539a0772ae67ce51b1af8dd3589408ca8f94e035e08af2c286b764f0b": {
+                "id": "8c0bf79539a0772ae67ce51b1af8dd3589408ca8f94e035e08af2c286b764f0b",
+                "path": "greengrass-stream-mgr-accel/AssetParameters/8c0bf79539a0772ae67ce51b1af8dd3589408ca8f94e035e08af2c286b764f0b",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "greengrass-stream-mgr-accel/AssetParameters/8c0bf79539a0772ae67ce51b1af8dd3589408ca8f94e035e08af2c286b764f0b/S3Bucket",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.135.0"
+                    }
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "greengrass-stream-mgr-accel/AssetParameters/8c0bf79539a0772ae67ce51b1af8dd3589408ca8f94e035e08af2c286b764f0b/S3VersionKey",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.135.0"
+                    }
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "greengrass-stream-mgr-accel/AssetParameters/8c0bf79539a0772ae67ce51b1af8dd3589408ca8f94e035e08af2c286b764f0b/ArtifactHash",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.135.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Construct",
+                  "version": "1.135.0"
+                }
+              },
+              "1a9999108cb9a97db23b62b6a6e70cd7ed275f3927dc68e3e003ec9fd034e97f": {
+                "id": "1a9999108cb9a97db23b62b6a6e70cd7ed275f3927dc68e3e003ec9fd034e97f",
+                "path": "greengrass-stream-mgr-accel/AssetParameters/1a9999108cb9a97db23b62b6a6e70cd7ed275f3927dc68e3e003ec9fd034e97f",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "greengrass-stream-mgr-accel/AssetParameters/1a9999108cb9a97db23b62b6a6e70cd7ed275f3927dc68e3e003ec9fd034e97f/S3Bucket",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.135.0"
+                    }
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "greengrass-stream-mgr-accel/AssetParameters/1a9999108cb9a97db23b62b6a6e70cd7ed275f3927dc68e3e003ec9fd034e97f/S3VersionKey",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.135.0"
+                    }
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "greengrass-stream-mgr-accel/AssetParameters/1a9999108cb9a97db23b62b6a6e70cd7ed275f3927dc68e3e003ec9fd034e97f/ArtifactHash",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.135.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Construct",
+                  "version": "1.135.0"
+                }
+              },
+              "5a8dbcac5919f2c70ce85467237d6f7b3d4af9b99587efb62290cb8704bdba44": {
+                "id": "5a8dbcac5919f2c70ce85467237d6f7b3d4af9b99587efb62290cb8704bdba44",
+                "path": "greengrass-stream-mgr-accel/AssetParameters/5a8dbcac5919f2c70ce85467237d6f7b3d4af9b99587efb62290cb8704bdba44",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "greengrass-stream-mgr-accel/AssetParameters/5a8dbcac5919f2c70ce85467237d6f7b3d4af9b99587efb62290cb8704bdba44/S3Bucket",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.135.0"
+                    }
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "greengrass-stream-mgr-accel/AssetParameters/5a8dbcac5919f2c70ce85467237d6f7b3d4af9b99587efb62290cb8704bdba44/S3VersionKey",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.135.0"
+                    }
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "greengrass-stream-mgr-accel/AssetParameters/5a8dbcac5919f2c70ce85467237d6f7b3d4af9b99587efb62290cb8704bdba44/ArtifactHash",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.135.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Construct",
+                  "version": "1.135.0"
+                }
+              },
+              "19c29402bb1437fc0ad6277f1054c41f4bb1fc15c9a053394660ac3ecd7e953a": {
+                "id": "19c29402bb1437fc0ad6277f1054c41f4bb1fc15c9a053394660ac3ecd7e953a",
+                "path": "greengrass-stream-mgr-accel/AssetParameters/19c29402bb1437fc0ad6277f1054c41f4bb1fc15c9a053394660ac3ecd7e953a",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "greengrass-stream-mgr-accel/AssetParameters/19c29402bb1437fc0ad6277f1054c41f4bb1fc15c9a053394660ac3ecd7e953a/S3Bucket",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.135.0"
+                    }
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "greengrass-stream-mgr-accel/AssetParameters/19c29402bb1437fc0ad6277f1054c41f4bb1fc15c9a053394660ac3ecd7e953a/S3VersionKey",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.135.0"
+                    }
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "greengrass-stream-mgr-accel/AssetParameters/19c29402bb1437fc0ad6277f1054c41f4bb1fc15c9a053394660ac3ecd7e953a/ArtifactHash",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.135.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Construct",
+                  "version": "1.135.0"
+                }
+              },
+              "53c586a58db02a5728a8bc66737963be156b422cf55a6dfe3920c8e019a886de": {
+                "id": "53c586a58db02a5728a8bc66737963be156b422cf55a6dfe3920c8e019a886de",
+                "path": "greengrass-stream-mgr-accel/AssetParameters/53c586a58db02a5728a8bc66737963be156b422cf55a6dfe3920c8e019a886de",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "greengrass-stream-mgr-accel/AssetParameters/53c586a58db02a5728a8bc66737963be156b422cf55a6dfe3920c8e019a886de/S3Bucket",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.135.0"
+                    }
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "greengrass-stream-mgr-accel/AssetParameters/53c586a58db02a5728a8bc66737963be156b422cf55a6dfe3920c8e019a886de/S3VersionKey",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.135.0"
+                    }
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "greengrass-stream-mgr-accel/AssetParameters/53c586a58db02a5728a8bc66737963be156b422cf55a6dfe3920c8e019a886de/ArtifactHash",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.135.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Construct",
+                  "version": "1.135.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.135.0"
+            }
+          },
+          "IotAnalyticsStack": {
+            "id": "IotAnalyticsStack",
+            "path": "greengrass-stream-mgr-accel/IotAnalyticsStack",
+            "children": {
+              "Channel": {
+                "id": "Channel",
+                "path": "greengrass-stream-mgr-accel/IotAnalyticsStack/Channel",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::IoTAnalytics::Channel",
+                  "aws:cdk:cloudformation:props": {
+                    "channelName": "greengrass_stream_mgr_accel_sensordata"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iotanalytics.CfnChannel",
+                  "version": "1.135.0"
+                }
+              },
+              "Datastore": {
+                "id": "Datastore",
+                "path": "greengrass-stream-mgr-accel/IotAnalyticsStack/Datastore",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::IoTAnalytics::Datastore",
+                  "aws:cdk:cloudformation:props": {
+                    "datastoreName": "greengrass_stream_mgr_accel_sensordata_datastore"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iotanalytics.CfnDatastore",
+                  "version": "1.135.0"
+                }
+              },
+              "Pipeline": {
+                "id": "Pipeline",
+                "path": "greengrass-stream-mgr-accel/IotAnalyticsStack/Pipeline",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::IoTAnalytics::Pipeline",
+                  "aws:cdk:cloudformation:props": {
+                    "pipelineActivities": [
+                      {
+                        "channel": {
+                          "name": "ChannelActivity",
+                          "channelName": "greengrass_stream_mgr_accel_sensordata",
+                          "next": "DatastoreActivity"
+                        },
+                        "datastore": {
+                          "name": "DatastoreActivity",
+                          "datastoreName": "greengrass_stream_mgr_accel_sensordata_datastore"
+                        }
+                      }
+                    ],
+                    "pipelineName": "greengrass_stream_mgr_accel_sensordata_pipeline"
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iotanalytics.CfnPipeline",
+                  "version": "1.135.0"
+                }
+              },
+              "SqlDataset": {
+                "id": "SqlDataset",
+                "path": "greengrass-stream-mgr-accel/IotAnalyticsStack/SqlDataset",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::IoTAnalytics::Dataset",
+                  "aws:cdk:cloudformation:props": {
+                    "actions": [
+                      {
+                        "actionName": "SqlAction",
+                        "queryAction": {
+                          "sqlQuery": "select * from greengrass_stream_mgr_accel_sensordata_datastore where __dt >= current_date - interval '1' day and from_unixtime(timestamp) > now() - interval '15' minute"
+                        }
+                      }
+                    ],
+                    "datasetName": "greengrass_stream_mgr_accel_sensordata_dataset",
+                    "retentionPeriod": {
+                      "unlimited": false,
+                      "numberOfDays": 30
+                    },
+                    "triggers": [
+                      {
+                        "schedule": {
+                          "scheduleExpression": "cron(0/5 * * * ? *)"
+                        }
+                      }
+                    ]
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iotanalytics.CfnDataset",
+                  "version": "1.135.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.135.0"
+            }
+          },
+          "KinesisStream": {
+            "id": "KinesisStream",
+            "path": "greengrass-stream-mgr-accel/KinesisStream",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "greengrass-stream-mgr-accel/KinesisStream/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Kinesis::Stream",
+                  "aws:cdk:cloudformation:props": {
+                    "shardCount": 1,
+                    "name": "AggregateData",
+                    "retentionPeriodHours": 24,
+                    "streamEncryption": {
+                      "Fn::If": [
+                        "AwsCdkKinesisEncryptedStreamsUnsupportedRegions",
+                        {
+                          "Ref": "AWS::NoValue"
+                        },
+                        {
+                          "EncryptionType": "KMS",
+                          "KeyId": "alias/aws/kinesis"
+                        }
+                      ]
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-kinesis.CfnStream",
+                  "version": "1.135.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-kinesis.Stream",
+              "version": "1.135.0"
+            }
+          },
+          "AwsCdkKinesisEncryptedStreamsUnsupportedRegions": {
+            "id": "AwsCdkKinesisEncryptedStreamsUnsupportedRegions",
+            "path": "greengrass-stream-mgr-accel/AwsCdkKinesisEncryptedStreamsUnsupportedRegions",
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.CfnCondition",
+              "version": "1.135.0"
+            }
+          },
+          "CreateThingCertPolicyCustomResource": {
+            "id": "CreateThingCertPolicyCustomResource",
+            "path": "greengrass-stream-mgr-accel/CreateThingCertPolicyCustomResource",
+            "children": {
+              "Singleton": {
+                "id": "Singleton",
+                "path": "greengrass-stream-mgr-accel/CreateThingCertPolicyCustomResource/Singleton",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-lambda.SingletonFunction",
+                  "version": "1.135.0"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "greengrass-stream-mgr-accel/CreateThingCertPolicyCustomResource/Resource",
+                "children": {
+                  "Default": {
+                    "id": "Default",
+                    "path": "greengrass-stream-mgr-accel/CreateThingCertPolicyCustomResource/Resource/Default",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnResource",
+                      "version": "1.135.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-cloudformation.CustomResource",
+                  "version": "1.135.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.135.0"
+            }
+          },
+          "SingletonLambda07d57a889b7954fb9cea72c823e7cc6c": {
+            "id": "SingletonLambda07d57a889b7954fb9cea72c823e7cc6c",
+            "path": "greengrass-stream-mgr-accel/SingletonLambda07d57a889b7954fb9cea72c823e7cc6c",
+            "children": {
+              "ServiceRole": {
+                "id": "ServiceRole",
+                "path": "greengrass-stream-mgr-accel/SingletonLambda07d57a889b7954fb9cea72c823e7cc6c/ServiceRole",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "greengrass-stream-mgr-accel/SingletonLambda07d57a889b7954fb9cea72c823e7cc6c/ServiceRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "lambda.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "managedPolicyArns": [
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.CfnRole",
+                      "version": "1.135.0"
+                    }
+                  },
+                  "DefaultPolicy": {
+                    "id": "DefaultPolicy",
+                    "path": "greengrass-stream-mgr-accel/SingletonLambda07d57a889b7954fb9cea72c823e7cc6c/ServiceRole/DefaultPolicy",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "greengrass-stream-mgr-accel/SingletonLambda07d57a889b7954fb9cea72c823e7cc6c/ServiceRole/DefaultPolicy/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                          "aws:cdk:cloudformation:props": {
+                            "policyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "iot:*",
+                                  "Effect": "Allow",
+                                  "Resource": "*"
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "policyName": "SingletonLambda07d57a889b7954fb9cea72c823e7cc6cServiceRoleDefaultPolicy183D06C5",
+                            "roles": [
+                              {
+                                "Ref": "SingletonLambda07d57a889b7954fb9cea72c823e7cc6cServiceRole8F49F508"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-iam.CfnPolicy",
+                          "version": "1.135.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.Policy",
+                      "version": "1.135.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iam.Role",
+                  "version": "1.135.0"
+                }
+              },
+              "Code": {
+                "id": "Code",
+                "path": "greengrass-stream-mgr-accel/SingletonLambda07d57a889b7954fb9cea72c823e7cc6c/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "greengrass-stream-mgr-accel/SingletonLambda07d57a889b7954fb9cea72c823e7cc6c/Code/Stage",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.AssetStaging",
+                      "version": "1.135.0"
+                    }
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "greengrass-stream-mgr-accel/SingletonLambda07d57a889b7954fb9cea72c823e7cc6c/Code/AssetBucket",
+                    "children": {
+                      "Notifications": {
+                        "id": "Notifications",
+                        "path": "greengrass-stream-mgr-accel/SingletonLambda07d57a889b7954fb9cea72c823e7cc6c/Code/AssetBucket/Notifications",
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/core.Construct",
+                          "version": "1.135.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-s3.BucketBase",
+                      "version": "1.135.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-s3-assets.Asset",
+                  "version": "1.135.0"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "greengrass-stream-mgr-accel/SingletonLambda07d57a889b7954fb9cea72c823e7cc6c/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "code": {
+                      "s3Bucket": {
+                        "Ref": "AssetParameters38935c8a301f982f3b09c5cd1fe2f319ffa74e03995915e1b1e31d56a2ebb7b3S3BucketAC403C55"
+                      },
+                      "s3Key": {
+                        "Fn::Join": [
+                          "",
+                          [
+                            {
+                              "Fn::Select": [
+                                0,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParameters38935c8a301f982f3b09c5cd1fe2f319ffa74e03995915e1b1e31d56a2ebb7b3S3VersionKey976CE641"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Fn::Select": [
+                                1,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParameters38935c8a301f982f3b09c5cd1fe2f319ffa74e03995915e1b1e31d56a2ebb7b3S3VersionKey976CE641"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "role": {
+                      "Fn::GetAtt": [
+                        "SingletonLambda07d57a889b7954fb9cea72c823e7cc6cServiceRole8F49F508",
+                        "Arn"
+                      ]
+                    },
+                    "functionName": "greengrass-stream-mgr-accel-CreateThingCertPolicyFunction",
+                    "handler": "index.main",
+                    "runtime": "python3.8",
+                    "timeout": 30
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-lambda.CfnFunction",
+                  "version": "1.135.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-lambda.Function",
+              "version": "1.135.0"
+            }
+          },
+          "CertificatePEM": {
+            "id": "CertificatePEM",
+            "path": "greengrass-stream-mgr-accel/CertificatePEM",
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.CfnOutput",
+              "version": "1.135.0"
+            }
+          },
+          "PrivateKeyPEM": {
+            "id": "PrivateKeyPEM",
+            "path": "greengrass-stream-mgr-accel/PrivateKeyPEM",
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.CfnOutput",
+              "version": "1.135.0"
+            }
+          },
+          "ThingArn": {
+            "id": "ThingArn",
+            "path": "greengrass-stream-mgr-accel/ThingArn",
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.CfnOutput",
+              "version": "1.135.0"
+            }
+          },
+          "EndpointDataAts": {
+            "id": "EndpointDataAts",
+            "path": "greengrass-stream-mgr-accel/EndpointDataAts",
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.CfnOutput",
+              "version": "1.135.0"
+            }
+          },
+          "GreengrassRoleCustomResource": {
+            "id": "GreengrassRoleCustomResource",
+            "path": "greengrass-stream-mgr-accel/GreengrassRoleCustomResource",
+            "children": {
+              "Singleton": {
+                "id": "Singleton",
+                "path": "greengrass-stream-mgr-accel/GreengrassRoleCustomResource/Singleton",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-lambda.SingletonFunction",
+                  "version": "1.135.0"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "greengrass-stream-mgr-accel/GreengrassRoleCustomResource/Resource",
+                "children": {
+                  "Default": {
+                    "id": "Default",
+                    "path": "greengrass-stream-mgr-accel/GreengrassRoleCustomResource/Resource/Default",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnResource",
+                      "version": "1.135.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-cloudformation.CustomResource",
+                  "version": "1.135.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.135.0"
+            }
+          },
+          "SingletonLambdabe002b3b58f75d3f9d62357cbfba03f8": {
+            "id": "SingletonLambdabe002b3b58f75d3f9d62357cbfba03f8",
+            "path": "greengrass-stream-mgr-accel/SingletonLambdabe002b3b58f75d3f9d62357cbfba03f8",
+            "children": {
+              "ServiceRole": {
+                "id": "ServiceRole",
+                "path": "greengrass-stream-mgr-accel/SingletonLambdabe002b3b58f75d3f9d62357cbfba03f8/ServiceRole",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "greengrass-stream-mgr-accel/SingletonLambdabe002b3b58f75d3f9d62357cbfba03f8/ServiceRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "lambda.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "managedPolicyArns": [
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.CfnRole",
+                      "version": "1.135.0"
+                    }
+                  },
+                  "DefaultPolicy": {
+                    "id": "DefaultPolicy",
+                    "path": "greengrass-stream-mgr-accel/SingletonLambdabe002b3b58f75d3f9d62357cbfba03f8/ServiceRole/DefaultPolicy",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "greengrass-stream-mgr-accel/SingletonLambdabe002b3b58f75d3f9d62357cbfba03f8/ServiceRole/DefaultPolicy/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                          "aws:cdk:cloudformation:props": {
+                            "policyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": [
+                                    "iam:CreateRole",
+                                    "iam:DeleteRole",
+                                    "iam:AttachRolePolicy",
+                                    "iam:PutRolePolicy",
+                                    "iam:ListRolePolicies",
+                                    "iam:DeleteRolePolicy",
+                                    "iam:ListAttachedRolePolicies",
+                                    "iam:DetachRolePolicy"
+                                  ],
+                                  "Effect": "Allow",
+                                  "Resource": "*"
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "policyName": "SingletonLambdabe002b3b58f75d3f9d62357cbfba03f8ServiceRoleDefaultPolicy923B4302",
+                            "roles": [
+                              {
+                                "Ref": "SingletonLambdabe002b3b58f75d3f9d62357cbfba03f8ServiceRole874A8EB6"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-iam.CfnPolicy",
+                          "version": "1.135.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.Policy",
+                      "version": "1.135.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iam.Role",
+                  "version": "1.135.0"
+                }
+              },
+              "Code": {
+                "id": "Code",
+                "path": "greengrass-stream-mgr-accel/SingletonLambdabe002b3b58f75d3f9d62357cbfba03f8/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "greengrass-stream-mgr-accel/SingletonLambdabe002b3b58f75d3f9d62357cbfba03f8/Code/Stage",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.AssetStaging",
+                      "version": "1.135.0"
+                    }
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "greengrass-stream-mgr-accel/SingletonLambdabe002b3b58f75d3f9d62357cbfba03f8/Code/AssetBucket",
+                    "children": {
+                      "Notifications": {
+                        "id": "Notifications",
+                        "path": "greengrass-stream-mgr-accel/SingletonLambdabe002b3b58f75d3f9d62357cbfba03f8/Code/AssetBucket/Notifications",
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/core.Construct",
+                          "version": "1.135.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-s3.BucketBase",
+                      "version": "1.135.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-s3-assets.Asset",
+                  "version": "1.135.0"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "greengrass-stream-mgr-accel/SingletonLambdabe002b3b58f75d3f9d62357cbfba03f8/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "code": {
+                      "s3Bucket": {
+                        "Ref": "AssetParameters8c0bf79539a0772ae67ce51b1af8dd3589408ca8f94e035e08af2c286b764f0bS3Bucket949C14D2"
+                      },
+                      "s3Key": {
+                        "Fn::Join": [
+                          "",
+                          [
+                            {
+                              "Fn::Select": [
+                                0,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParameters8c0bf79539a0772ae67ce51b1af8dd3589408ca8f94e035e08af2c286b764f0bS3VersionKeyFEC001BD"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Fn::Select": [
+                                1,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParameters8c0bf79539a0772ae67ce51b1af8dd3589408ca8f94e035e08af2c286b764f0bS3VersionKeyFEC001BD"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "role": {
+                      "Fn::GetAtt": [
+                        "SingletonLambdabe002b3b58f75d3f9d62357cbfba03f8ServiceRole874A8EB6",
+                        "Arn"
+                      ]
+                    },
+                    "functionName": "greengrass-stream-mgr-accel-GreengrassRoleFunction",
+                    "handler": "index.main",
+                    "runtime": "python3.8",
+                    "timeout": 30
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-lambda.CfnFunction",
+                  "version": "1.135.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-lambda.Function",
+              "version": "1.135.0"
+            }
+          },
+          "GreengrassLambdaSensorSource": {
+            "id": "GreengrassLambdaSensorSource",
+            "path": "greengrass-stream-mgr-accel/GreengrassLambdaSensorSource",
+            "children": {
+              "greengrass-stream-mgr-accel-SensorSource": {
+                "id": "greengrass-stream-mgr-accel-SensorSource",
+                "path": "greengrass-stream-mgr-accel/GreengrassLambdaSensorSource/greengrass-stream-mgr-accel-SensorSource",
+                "children": {
+                  "ServiceRole": {
+                    "id": "ServiceRole",
+                    "path": "greengrass-stream-mgr-accel/GreengrassLambdaSensorSource/greengrass-stream-mgr-accel-SensorSource/ServiceRole",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "greengrass-stream-mgr-accel/GreengrassLambdaSensorSource/greengrass-stream-mgr-accel-SensorSource/ServiceRole/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                          "aws:cdk:cloudformation:props": {
+                            "assumeRolePolicyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "sts:AssumeRole",
+                                  "Effect": "Allow",
+                                  "Principal": {
+                                    "Service": "lambda.amazonaws.com"
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "managedPolicyArns": [
+                              {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    "arn:",
+                                    {
+                                      "Ref": "AWS::Partition"
+                                    },
+                                    ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                                  ]
+                                ]
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-iam.CfnRole",
+                          "version": "1.135.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.Role",
+                      "version": "1.135.0"
+                    }
+                  },
+                  "Code": {
+                    "id": "Code",
+                    "path": "greengrass-stream-mgr-accel/GreengrassLambdaSensorSource/greengrass-stream-mgr-accel-SensorSource/Code",
+                    "children": {
+                      "Stage": {
+                        "id": "Stage",
+                        "path": "greengrass-stream-mgr-accel/GreengrassLambdaSensorSource/greengrass-stream-mgr-accel-SensorSource/Code/Stage",
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/core.AssetStaging",
+                          "version": "1.135.0"
+                        }
+                      },
+                      "AssetBucket": {
+                        "id": "AssetBucket",
+                        "path": "greengrass-stream-mgr-accel/GreengrassLambdaSensorSource/greengrass-stream-mgr-accel-SensorSource/Code/AssetBucket",
+                        "children": {
+                          "Notifications": {
+                            "id": "Notifications",
+                            "path": "greengrass-stream-mgr-accel/GreengrassLambdaSensorSource/greengrass-stream-mgr-accel-SensorSource/Code/AssetBucket/Notifications",
+                            "constructInfo": {
+                              "fqn": "@aws-cdk/core.Construct",
+                              "version": "1.135.0"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-s3.BucketBase",
+                          "version": "1.135.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-s3-assets.Asset",
+                      "version": "1.135.0"
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "greengrass-stream-mgr-accel/GreengrassLambdaSensorSource/greengrass-stream-mgr-accel-SensorSource/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                      "aws:cdk:cloudformation:props": {
+                        "code": {
+                          "s3Bucket": {
+                            "Ref": "AssetParameters1a9999108cb9a97db23b62b6a6e70cd7ed275f3927dc68e3e003ec9fd034e97fS3Bucket7266B88C"
+                          },
+                          "s3Key": {
+                            "Fn::Join": [
+                              "",
+                              [
+                                {
+                                  "Fn::Select": [
+                                    0,
+                                    {
+                                      "Fn::Split": [
+                                        "||",
+                                        {
+                                          "Ref": "AssetParameters1a9999108cb9a97db23b62b6a6e70cd7ed275f3927dc68e3e003ec9fd034e97fS3VersionKey36DB115E"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Fn::Select": [
+                                    1,
+                                    {
+                                      "Fn::Split": [
+                                        "||",
+                                        {
+                                          "Ref": "AssetParameters1a9999108cb9a97db23b62b6a6e70cd7ed275f3927dc68e3e003ec9fd034e97fS3VersionKey36DB115E"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            ]
+                          }
+                        },
+                        "role": {
+                          "Fn::GetAtt": [
+                            "GreengrassLambdaSensorSourcegreengrassstreammgraccelSensorSourceServiceRole3F332B4B",
+                            "Arn"
+                          ]
+                        },
+                        "functionName": "greengrass-stream-mgr-accel-GreengrassLambda-SensorSource",
+                        "handler": "sensor_source.main",
+                        "runtime": "python3.7"
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-lambda.CfnFunction",
+                      "version": "1.135.0"
+                    }
+                  },
+                  "VersionFunctionVersionPlaceholder": {
+                    "id": "VersionFunctionVersionPlaceholder",
+                    "path": "greengrass-stream-mgr-accel/GreengrassLambdaSensorSource/greengrass-stream-mgr-accel-SensorSource/VersionFunctionVersionPlaceholder",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "greengrass-stream-mgr-accel/GreengrassLambdaSensorSource/greengrass-stream-mgr-accel-SensorSource/VersionFunctionVersionPlaceholder/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::Lambda::Version",
+                          "aws:cdk:cloudformation:props": {
+                            "functionName": {
+                              "Ref": "GreengrassLambdaSensorSourcegreengrassstreammgraccelSensorSource9599A3C8"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-lambda.CfnVersion",
+                          "version": "1.135.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-lambda.Version",
+                      "version": "1.135.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-lambda.Function",
+                  "version": "1.135.0"
+                }
+              },
+              "greengrass-stream-mgr-accel-GreengrassSampleAlias": {
+                "id": "greengrass-stream-mgr-accel-GreengrassSampleAlias",
+                "path": "greengrass-stream-mgr-accel/GreengrassLambdaSensorSource/greengrass-stream-mgr-accel-GreengrassSampleAlias",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "greengrass-stream-mgr-accel/GreengrassLambdaSensorSource/greengrass-stream-mgr-accel-GreengrassSampleAlias/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::Lambda::Alias",
+                      "aws:cdk:cloudformation:props": {
+                        "functionName": {
+                          "Ref": "GreengrassLambdaSensorSourcegreengrassstreammgraccelSensorSource9599A3C8"
+                        },
+                        "functionVersion": {
+                          "Fn::GetAtt": [
+                            "GreengrassLambdaSensorSourcegreengrassstreammgraccelSensorSourceVersionFunctionVersionPlaceholderB866C501",
+                            "Version"
+                          ]
+                        },
+                        "name": "PROD"
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-lambda.CfnAlias",
+                      "version": "1.135.0"
+                    }
+                  },
+                  "ScalingRole": {
+                    "id": "ScalingRole",
+                    "path": "greengrass-stream-mgr-accel/GreengrassLambdaSensorSource/greengrass-stream-mgr-accel-GreengrassSampleAlias/ScalingRole",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.Resource",
+                      "version": "1.135.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-lambda.Alias",
+                  "version": "1.135.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.135.0"
+            }
+          },
+          "GreengrassLambdaStreamProducer": {
+            "id": "GreengrassLambdaStreamProducer",
+            "path": "greengrass-stream-mgr-accel/GreengrassLambdaStreamProducer",
+            "children": {
+              "greengrass-stream-mgr-accel-StreamProducer": {
+                "id": "greengrass-stream-mgr-accel-StreamProducer",
+                "path": "greengrass-stream-mgr-accel/GreengrassLambdaStreamProducer/greengrass-stream-mgr-accel-StreamProducer",
+                "children": {
+                  "ServiceRole": {
+                    "id": "ServiceRole",
+                    "path": "greengrass-stream-mgr-accel/GreengrassLambdaStreamProducer/greengrass-stream-mgr-accel-StreamProducer/ServiceRole",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "greengrass-stream-mgr-accel/GreengrassLambdaStreamProducer/greengrass-stream-mgr-accel-StreamProducer/ServiceRole/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                          "aws:cdk:cloudformation:props": {
+                            "assumeRolePolicyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "sts:AssumeRole",
+                                  "Effect": "Allow",
+                                  "Principal": {
+                                    "Service": "lambda.amazonaws.com"
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "managedPolicyArns": [
+                              {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    "arn:",
+                                    {
+                                      "Ref": "AWS::Partition"
+                                    },
+                                    ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                                  ]
+                                ]
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-iam.CfnRole",
+                          "version": "1.135.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.Role",
+                      "version": "1.135.0"
+                    }
+                  },
+                  "Code": {
+                    "id": "Code",
+                    "path": "greengrass-stream-mgr-accel/GreengrassLambdaStreamProducer/greengrass-stream-mgr-accel-StreamProducer/Code",
+                    "children": {
+                      "Stage": {
+                        "id": "Stage",
+                        "path": "greengrass-stream-mgr-accel/GreengrassLambdaStreamProducer/greengrass-stream-mgr-accel-StreamProducer/Code/Stage",
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/core.AssetStaging",
+                          "version": "1.135.0"
+                        }
+                      },
+                      "AssetBucket": {
+                        "id": "AssetBucket",
+                        "path": "greengrass-stream-mgr-accel/GreengrassLambdaStreamProducer/greengrass-stream-mgr-accel-StreamProducer/Code/AssetBucket",
+                        "children": {
+                          "Notifications": {
+                            "id": "Notifications",
+                            "path": "greengrass-stream-mgr-accel/GreengrassLambdaStreamProducer/greengrass-stream-mgr-accel-StreamProducer/Code/AssetBucket/Notifications",
+                            "constructInfo": {
+                              "fqn": "@aws-cdk/core.Construct",
+                              "version": "1.135.0"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-s3.BucketBase",
+                          "version": "1.135.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-s3-assets.Asset",
+                      "version": "1.135.0"
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "greengrass-stream-mgr-accel/GreengrassLambdaStreamProducer/greengrass-stream-mgr-accel-StreamProducer/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                      "aws:cdk:cloudformation:props": {
+                        "code": {
+                          "s3Bucket": {
+                            "Ref": "AssetParameters5a8dbcac5919f2c70ce85467237d6f7b3d4af9b99587efb62290cb8704bdba44S3Bucket1C66E62E"
+                          },
+                          "s3Key": {
+                            "Fn::Join": [
+                              "",
+                              [
+                                {
+                                  "Fn::Select": [
+                                    0,
+                                    {
+                                      "Fn::Split": [
+                                        "||",
+                                        {
+                                          "Ref": "AssetParameters5a8dbcac5919f2c70ce85467237d6f7b3d4af9b99587efb62290cb8704bdba44S3VersionKey5AF3969D"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Fn::Select": [
+                                    1,
+                                    {
+                                      "Fn::Split": [
+                                        "||",
+                                        {
+                                          "Ref": "AssetParameters5a8dbcac5919f2c70ce85467237d6f7b3d4af9b99587efb62290cb8704bdba44S3VersionKey5AF3969D"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            ]
+                          }
+                        },
+                        "role": {
+                          "Fn::GetAtt": [
+                            "GreengrassLambdaStreamProducergreengrassstreammgraccelStreamProducerServiceRoleE5D4EF28",
+                            "Arn"
+                          ]
+                        },
+                        "functionName": "greengrass-stream-mgr-accel-GreengrassLambda-StreamProducer",
+                        "handler": "stream_producer.main",
+                        "runtime": "python3.7"
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-lambda.CfnFunction",
+                      "version": "1.135.0"
+                    }
+                  },
+                  "VersionFunctionVersionPlaceholder": {
+                    "id": "VersionFunctionVersionPlaceholder",
+                    "path": "greengrass-stream-mgr-accel/GreengrassLambdaStreamProducer/greengrass-stream-mgr-accel-StreamProducer/VersionFunctionVersionPlaceholder",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "greengrass-stream-mgr-accel/GreengrassLambdaStreamProducer/greengrass-stream-mgr-accel-StreamProducer/VersionFunctionVersionPlaceholder/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::Lambda::Version",
+                          "aws:cdk:cloudformation:props": {
+                            "functionName": {
+                              "Ref": "GreengrassLambdaStreamProducergreengrassstreammgraccelStreamProducer542E0133"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-lambda.CfnVersion",
+                          "version": "1.135.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-lambda.Version",
+                      "version": "1.135.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-lambda.Function",
+                  "version": "1.135.0"
+                }
+              },
+              "greengrass-stream-mgr-accel-GreengrassSampleAlias": {
+                "id": "greengrass-stream-mgr-accel-GreengrassSampleAlias",
+                "path": "greengrass-stream-mgr-accel/GreengrassLambdaStreamProducer/greengrass-stream-mgr-accel-GreengrassSampleAlias",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "greengrass-stream-mgr-accel/GreengrassLambdaStreamProducer/greengrass-stream-mgr-accel-GreengrassSampleAlias/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::Lambda::Alias",
+                      "aws:cdk:cloudformation:props": {
+                        "functionName": {
+                          "Ref": "GreengrassLambdaStreamProducergreengrassstreammgraccelStreamProducer542E0133"
+                        },
+                        "functionVersion": {
+                          "Fn::GetAtt": [
+                            "GreengrassLambdaStreamProducergreengrassstreammgraccelStreamProducerVersionFunctionVersionPlaceholder36DD458C",
+                            "Version"
+                          ]
+                        },
+                        "name": "PROD"
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-lambda.CfnAlias",
+                      "version": "1.135.0"
+                    }
+                  },
+                  "ScalingRole": {
+                    "id": "ScalingRole",
+                    "path": "greengrass-stream-mgr-accel/GreengrassLambdaStreamProducer/greengrass-stream-mgr-accel-GreengrassSampleAlias/ScalingRole",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.Resource",
+                      "version": "1.135.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-lambda.Alias",
+                  "version": "1.135.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.135.0"
+            }
+          },
+          "GreengrassLambdaStreamAggregator": {
+            "id": "GreengrassLambdaStreamAggregator",
+            "path": "greengrass-stream-mgr-accel/GreengrassLambdaStreamAggregator",
+            "children": {
+              "greengrass-stream-mgr-accel-StreamAggregator": {
+                "id": "greengrass-stream-mgr-accel-StreamAggregator",
+                "path": "greengrass-stream-mgr-accel/GreengrassLambdaStreamAggregator/greengrass-stream-mgr-accel-StreamAggregator",
+                "children": {
+                  "ServiceRole": {
+                    "id": "ServiceRole",
+                    "path": "greengrass-stream-mgr-accel/GreengrassLambdaStreamAggregator/greengrass-stream-mgr-accel-StreamAggregator/ServiceRole",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "greengrass-stream-mgr-accel/GreengrassLambdaStreamAggregator/greengrass-stream-mgr-accel-StreamAggregator/ServiceRole/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                          "aws:cdk:cloudformation:props": {
+                            "assumeRolePolicyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "sts:AssumeRole",
+                                  "Effect": "Allow",
+                                  "Principal": {
+                                    "Service": "lambda.amazonaws.com"
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "managedPolicyArns": [
+                              {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    "arn:",
+                                    {
+                                      "Ref": "AWS::Partition"
+                                    },
+                                    ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                                  ]
+                                ]
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-iam.CfnRole",
+                          "version": "1.135.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.Role",
+                      "version": "1.135.0"
+                    }
+                  },
+                  "Code": {
+                    "id": "Code",
+                    "path": "greengrass-stream-mgr-accel/GreengrassLambdaStreamAggregator/greengrass-stream-mgr-accel-StreamAggregator/Code",
+                    "children": {
+                      "Stage": {
+                        "id": "Stage",
+                        "path": "greengrass-stream-mgr-accel/GreengrassLambdaStreamAggregator/greengrass-stream-mgr-accel-StreamAggregator/Code/Stage",
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/core.AssetStaging",
+                          "version": "1.135.0"
+                        }
+                      },
+                      "AssetBucket": {
+                        "id": "AssetBucket",
+                        "path": "greengrass-stream-mgr-accel/GreengrassLambdaStreamAggregator/greengrass-stream-mgr-accel-StreamAggregator/Code/AssetBucket",
+                        "children": {
+                          "Notifications": {
+                            "id": "Notifications",
+                            "path": "greengrass-stream-mgr-accel/GreengrassLambdaStreamAggregator/greengrass-stream-mgr-accel-StreamAggregator/Code/AssetBucket/Notifications",
+                            "constructInfo": {
+                              "fqn": "@aws-cdk/core.Construct",
+                              "version": "1.135.0"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-s3.BucketBase",
+                          "version": "1.135.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-s3-assets.Asset",
+                      "version": "1.135.0"
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "greengrass-stream-mgr-accel/GreengrassLambdaStreamAggregator/greengrass-stream-mgr-accel-StreamAggregator/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                      "aws:cdk:cloudformation:props": {
+                        "code": {
+                          "s3Bucket": {
+                            "Ref": "AssetParameters19c29402bb1437fc0ad6277f1054c41f4bb1fc15c9a053394660ac3ecd7e953aS3Bucket69E662FC"
+                          },
+                          "s3Key": {
+                            "Fn::Join": [
+                              "",
+                              [
+                                {
+                                  "Fn::Select": [
+                                    0,
+                                    {
+                                      "Fn::Split": [
+                                        "||",
+                                        {
+                                          "Ref": "AssetParameters19c29402bb1437fc0ad6277f1054c41f4bb1fc15c9a053394660ac3ecd7e953aS3VersionKey755A9773"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Fn::Select": [
+                                    1,
+                                    {
+                                      "Fn::Split": [
+                                        "||",
+                                        {
+                                          "Ref": "AssetParameters19c29402bb1437fc0ad6277f1054c41f4bb1fc15c9a053394660ac3ecd7e953aS3VersionKey755A9773"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            ]
+                          }
+                        },
+                        "role": {
+                          "Fn::GetAtt": [
+                            "GreengrassLambdaStreamAggregatorgreengrassstreammgraccelStreamAggregatorServiceRoleFD2E789A",
+                            "Arn"
+                          ]
+                        },
+                        "functionName": "greengrass-stream-mgr-accel-GreengrassLambda-StreamAggregator",
+                        "handler": "stream_aggregator.main",
+                        "runtime": "python3.7"
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-lambda.CfnFunction",
+                      "version": "1.135.0"
+                    }
+                  },
+                  "VersionFunctionVersionPlaceholder": {
+                    "id": "VersionFunctionVersionPlaceholder",
+                    "path": "greengrass-stream-mgr-accel/GreengrassLambdaStreamAggregator/greengrass-stream-mgr-accel-StreamAggregator/VersionFunctionVersionPlaceholder",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "greengrass-stream-mgr-accel/GreengrassLambdaStreamAggregator/greengrass-stream-mgr-accel-StreamAggregator/VersionFunctionVersionPlaceholder/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::Lambda::Version",
+                          "aws:cdk:cloudformation:props": {
+                            "functionName": {
+                              "Ref": "GreengrassLambdaStreamAggregatorgreengrassstreammgraccelStreamAggregator910A3689"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-lambda.CfnVersion",
+                          "version": "1.135.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-lambda.Version",
+                      "version": "1.135.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-lambda.Function",
+                  "version": "1.135.0"
+                }
+              },
+              "greengrass-stream-mgr-accel-GreengrassSampleAlias": {
+                "id": "greengrass-stream-mgr-accel-GreengrassSampleAlias",
+                "path": "greengrass-stream-mgr-accel/GreengrassLambdaStreamAggregator/greengrass-stream-mgr-accel-GreengrassSampleAlias",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "greengrass-stream-mgr-accel/GreengrassLambdaStreamAggregator/greengrass-stream-mgr-accel-GreengrassSampleAlias/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::Lambda::Alias",
+                      "aws:cdk:cloudformation:props": {
+                        "functionName": {
+                          "Ref": "GreengrassLambdaStreamAggregatorgreengrassstreammgraccelStreamAggregator910A3689"
+                        },
+                        "functionVersion": {
+                          "Fn::GetAtt": [
+                            "GreengrassLambdaStreamAggregatorgreengrassstreammgraccelStreamAggregatorVersionFunctionVersionPlaceholder05F4D87B",
+                            "Version"
+                          ]
+                        },
+                        "name": "PROD"
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-lambda.CfnAlias",
+                      "version": "1.135.0"
+                    }
+                  },
+                  "ScalingRole": {
+                    "id": "ScalingRole",
+                    "path": "greengrass-stream-mgr-accel/GreengrassLambdaStreamAggregator/greengrass-stream-mgr-accel-GreengrassSampleAlias/ScalingRole",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.Resource",
+                      "version": "1.135.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-lambda.Alias",
+                  "version": "1.135.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.135.0"
+            }
+          },
+          "CoreDefinition": {
+            "id": "CoreDefinition",
+            "path": "greengrass-stream-mgr-accel/CoreDefinition",
+            "attributes": {
+              "aws:cdk:cloudformation:type": "AWS::Greengrass::CoreDefinition",
+              "aws:cdk:cloudformation:props": {
+                "name": "StreamCore",
+                "initialVersion": {
+                  "cores": [
+                    {
+                      "certificateArn": {
+                        "Fn::GetAtt": [
+                          "CreateThingCertPolicyCustomResourceFE72F68F",
+                          "certificateArn"
+                        ]
+                      },
+                      "id": "1",
+                      "thingArn": {
+                        "Fn::GetAtt": [
+                          "CreateThingCertPolicyCustomResourceFE72F68F",
+                          "thingArn"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-greengrass.CfnCoreDefinition",
+              "version": "1.135.0"
+            }
+          },
+          "FunctionDefinition": {
+            "id": "FunctionDefinition",
+            "path": "greengrass-stream-mgr-accel/FunctionDefinition",
+            "attributes": {
+              "aws:cdk:cloudformation:type": "AWS::Greengrass::FunctionDefinition",
+              "aws:cdk:cloudformation:props": {
+                "name": "GreengrassFunction"
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-greengrass.CfnFunctionDefinition",
+              "version": "1.135.0"
+            }
+          },
+          "FunctionDefinitionVersion": {
+            "id": "FunctionDefinitionVersion",
+            "path": "greengrass-stream-mgr-accel/FunctionDefinitionVersion",
+            "attributes": {
+              "aws:cdk:cloudformation:type": "AWS::Greengrass::FunctionDefinitionVersion",
+              "aws:cdk:cloudformation:props": {
+                "functionDefinitionId": {
+                  "Fn::GetAtt": [
+                    "FunctionDefinition",
+                    "Id"
+                  ]
+                },
+                "functions": [
+                  {
+                    "id": "1",
+                    "functionArn": "arn:aws:lambda:::function:GGStreamManager:1",
+                    "functionConfiguration": {
+                      "encodingType": "binary",
+                      "pinned": true,
+                      "timeout": 3
+                    }
+                  },
+                  {
+                    "id": "2",
+                    "functionArn": {
+                      "Ref": "GreengrassLambdaSensorSourcegreengrassstreammgraccelGreengrassSampleAlias00671FA5"
+                    },
+                    "functionConfiguration": {
+                      "encodingType": "binary",
+                      "pinned": true,
+                      "timeout": 3,
+                      "environment": {}
+                    }
+                  },
+                  {
+                    "id": "3",
+                    "functionArn": {
+                      "Ref": "GreengrassLambdaStreamProducergreengrassstreammgraccelGreengrassSampleAlias57EC18A8"
+                    },
+                    "functionConfiguration": {
+                      "encodingType": "binary",
+                      "timeout": 3,
+                      "environment": {
+                        "variables": {
+                          "STREAM_MANAGER_CHANNEL": "greengrass_stream_mgr_accel_sensordata"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "id": "4",
+                    "functionArn": {
+                      "Ref": "GreengrassLambdaStreamAggregatorgreengrassstreammgraccelGreengrassSampleAliasFBB7141A"
+                    },
+                    "functionConfiguration": {
+                      "encodingType": "binary",
+                      "timeout": 3,
+                      "pinned": true,
+                      "environment": {
+                        "variables": {
+                          "LOCAL_DATA_STREAM": "LocalDataStream",
+                          "KINESIS_DATA_STREAM": {
+                            "Ref": "KinesisStream46752A3E"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ],
+                "defaultConfig": {
+                  "execution": {
+                    "isolationMode": "NoContainer"
+                  }
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-greengrass.CfnFunctionDefinitionVersion",
+              "version": "1.135.0"
+            }
+          },
+          "ConnectorDefinition": {
+            "id": "ConnectorDefinition",
+            "path": "greengrass-stream-mgr-accel/ConnectorDefinition",
+            "attributes": {
+              "aws:cdk:cloudformation:type": "AWS::Greengrass::ConnectorDefinition",
+              "aws:cdk:cloudformation:props": {
+                "name": "ConnectorDefinition",
+                "initialVersion": {
+                  "connectors": [
+                    {
+                      "connectorArn": "arn:aws:greengrass:us-west-2::/connectors/DockerApplicationDeployment/versions/7",
+                      "id": "1",
+                      "parameters": {
+                        "DockerComposeFileS3Bucket": {
+                          "Ref": "S3SourceBucketE7A60B41"
+                        },
+                        "DockerComposeFileS3Key": "docker-compose.yml",
+                        "DockerComposeFileDestinationPath": "/opt"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-greengrass.CfnConnectorDefinition",
+              "version": "1.135.0"
+            }
+          },
+          "SubscriptionDefinition": {
+            "id": "SubscriptionDefinition",
+            "path": "greengrass-stream-mgr-accel/SubscriptionDefinition",
+            "attributes": {
+              "aws:cdk:cloudformation:type": "AWS::Greengrass::SubscriptionDefinition",
+              "aws:cdk:cloudformation:props": {
+                "name": "SubscriptionsDefinition",
+                "initialVersion": {
+                  "subscriptions": [
+                    {
+                      "id": "1",
+                      "source": {
+                        "Ref": "GreengrassLambdaSensorSourcegreengrassstreammgraccelGreengrassSampleAlias00671FA5"
+                      },
+                      "subject": "sensor_data",
+                      "target": {
+                        "Ref": "GreengrassLambdaStreamProducergreengrassstreammgraccelGreengrassSampleAlias57EC18A8"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-greengrass.CfnSubscriptionDefinition",
+              "version": "1.135.0"
+            }
+          },
+          "LoggerDefinition": {
+            "id": "LoggerDefinition",
+            "path": "greengrass-stream-mgr-accel/LoggerDefinition",
+            "attributes": {
+              "aws:cdk:cloudformation:type": "AWS::Greengrass::LoggerDefinition",
+              "aws:cdk:cloudformation:props": {
+                "name": "LoggerDefinition",
+                "initialVersion": {
+                  "loggers": [
+                    {
+                      "id": "1",
+                      "component": "GreengrassSystem",
+                      "level": "INFO",
+                      "type": "FileSystem",
+                      "space": 1024
+                    },
+                    {
+                      "id": "2",
+                      "component": "Lambda",
+                      "level": "INFO",
+                      "type": "FileSystem",
+                      "space": 1024
+                    },
+                    {
+                      "id": "3",
+                      "component": "GreengrassSystem",
+                      "level": "WARN",
+                      "type": "AWSCloudWatch"
+                    },
+                    {
+                      "id": "4",
+                      "component": "Lambda",
+                      "level": "WARN",
+                      "type": "AWSCloudWatch"
+                    }
+                  ]
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-greengrass.CfnLoggerDefinition",
+              "version": "1.135.0"
+            }
+          },
+          "GreengrassGroup": {
+            "id": "GreengrassGroup",
+            "path": "greengrass-stream-mgr-accel/GreengrassGroup",
+            "attributes": {
+              "aws:cdk:cloudformation:type": "AWS::Greengrass::Group",
+              "aws:cdk:cloudformation:props": {
+                "name": "greengrass_stream_mgr_accel",
+                "roleArn": {
+                  "Fn::GetAtt": [
+                    "GreengrassRoleCustomResource21FB6A40",
+                    "roleArn"
+                  ]
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-greengrass.CfnGroup",
+              "version": "1.135.0"
+            }
+          },
+          "GreengrassGroupVersion": {
+            "id": "GreengrassGroupVersion",
+            "path": "greengrass-stream-mgr-accel/GreengrassGroupVersion",
+            "attributes": {
+              "aws:cdk:cloudformation:type": "AWS::Greengrass::GroupVersion",
+              "aws:cdk:cloudformation:props": {
+                "groupId": {
+                  "Ref": "GreengrassGroup"
+                },
+                "connectorDefinitionVersionArn": {
+                  "Fn::GetAtt": [
+                    "ConnectorDefinition",
+                    "LatestVersionArn"
+                  ]
+                },
+                "coreDefinitionVersionArn": {
+                  "Fn::GetAtt": [
+                    "CoreDefinition",
+                    "LatestVersionArn"
+                  ]
+                },
+                "functionDefinitionVersionArn": {
+                  "Fn::GetAtt": [
+                    "FunctionDefinition",
+                    "LatestVersionArn"
+                  ]
+                },
+                "loggerDefinitionVersionArn": {
+                  "Fn::GetAtt": [
+                    "LoggerDefinition",
+                    "LatestVersionArn"
+                  ]
+                },
+                "subscriptionDefinitionVersionArn": {
+                  "Fn::GetAtt": [
+                    "SubscriptionDefinition",
+                    "LatestVersionArn"
+                  ]
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-greengrass.CfnGroupVersion",
+              "version": "1.135.0"
+            }
+          },
+          "GreengrassManageDeploymentsResource": {
+            "id": "GreengrassManageDeploymentsResource",
+            "path": "greengrass-stream-mgr-accel/GreengrassManageDeploymentsResource",
+            "children": {
+              "Singleton": {
+                "id": "Singleton",
+                "path": "greengrass-stream-mgr-accel/GreengrassManageDeploymentsResource/Singleton",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-lambda.SingletonFunction",
+                  "version": "1.135.0"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "greengrass-stream-mgr-accel/GreengrassManageDeploymentsResource/Resource",
+                "children": {
+                  "Default": {
+                    "id": "Default",
+                    "path": "greengrass-stream-mgr-accel/GreengrassManageDeploymentsResource/Resource/Default",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnResource",
+                      "version": "1.135.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-cloudformation.CustomResource",
+                  "version": "1.135.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.135.0"
+            }
+          },
+          "SingletonLambda618d0fcd95f95ad490d8f5db6fc0c9c3": {
+            "id": "SingletonLambda618d0fcd95f95ad490d8f5db6fc0c9c3",
+            "path": "greengrass-stream-mgr-accel/SingletonLambda618d0fcd95f95ad490d8f5db6fc0c9c3",
+            "children": {
+              "ServiceRole": {
+                "id": "ServiceRole",
+                "path": "greengrass-stream-mgr-accel/SingletonLambda618d0fcd95f95ad490d8f5db6fc0c9c3/ServiceRole",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "greengrass-stream-mgr-accel/SingletonLambda618d0fcd95f95ad490d8f5db6fc0c9c3/ServiceRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "lambda.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "managedPolicyArns": [
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.CfnRole",
+                      "version": "1.135.0"
+                    }
+                  },
+                  "DefaultPolicy": {
+                    "id": "DefaultPolicy",
+                    "path": "greengrass-stream-mgr-accel/SingletonLambda618d0fcd95f95ad490d8f5db6fc0c9c3/ServiceRole/DefaultPolicy",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "greengrass-stream-mgr-accel/SingletonLambda618d0fcd95f95ad490d8f5db6fc0c9c3/ServiceRole/DefaultPolicy/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                          "aws:cdk:cloudformation:props": {
+                            "policyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": [
+                                    "greengrass:*",
+                                    "iot:*"
+                                  ],
+                                  "Effect": "Allow",
+                                  "Resource": "*"
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "policyName": "SingletonLambda618d0fcd95f95ad490d8f5db6fc0c9c3ServiceRoleDefaultPolicy4E549AB6",
+                            "roles": [
+                              {
+                                "Ref": "SingletonLambda618d0fcd95f95ad490d8f5db6fc0c9c3ServiceRole2B64E1BD"
+                              }
+                            ]
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-iam.CfnPolicy",
+                          "version": "1.135.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.Policy",
+                      "version": "1.135.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iam.Role",
+                  "version": "1.135.0"
+                }
+              },
+              "Code": {
+                "id": "Code",
+                "path": "greengrass-stream-mgr-accel/SingletonLambda618d0fcd95f95ad490d8f5db6fc0c9c3/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "greengrass-stream-mgr-accel/SingletonLambda618d0fcd95f95ad490d8f5db6fc0c9c3/Code/Stage",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.AssetStaging",
+                      "version": "1.135.0"
+                    }
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "greengrass-stream-mgr-accel/SingletonLambda618d0fcd95f95ad490d8f5db6fc0c9c3/Code/AssetBucket",
+                    "children": {
+                      "Notifications": {
+                        "id": "Notifications",
+                        "path": "greengrass-stream-mgr-accel/SingletonLambda618d0fcd95f95ad490d8f5db6fc0c9c3/Code/AssetBucket/Notifications",
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/core.Construct",
+                          "version": "1.135.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-s3.BucketBase",
+                      "version": "1.135.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-s3-assets.Asset",
+                  "version": "1.135.0"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "greengrass-stream-mgr-accel/SingletonLambda618d0fcd95f95ad490d8f5db6fc0c9c3/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "code": {
+                      "s3Bucket": {
+                        "Ref": "AssetParameters53c586a58db02a5728a8bc66737963be156b422cf55a6dfe3920c8e019a886deS3BucketDD0989CD"
+                      },
+                      "s3Key": {
+                        "Fn::Join": [
+                          "",
+                          [
+                            {
+                              "Fn::Select": [
+                                0,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParameters53c586a58db02a5728a8bc66737963be156b422cf55a6dfe3920c8e019a886deS3VersionKey34A621A5"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Fn::Select": [
+                                1,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParameters53c586a58db02a5728a8bc66737963be156b422cf55a6dfe3920c8e019a886deS3VersionKey34A621A5"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "role": {
+                      "Fn::GetAtt": [
+                        "SingletonLambda618d0fcd95f95ad490d8f5db6fc0c9c3ServiceRole2B64E1BD",
+                        "Arn"
+                      ]
+                    },
+                    "functionName": "greengrass-stream-mgr-accel-GreengrassManageDeploymentsFunction",
+                    "handler": "index.main",
+                    "runtime": "python3.8",
+                    "timeout": 30
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-lambda.CfnFunction",
+                  "version": "1.135.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-lambda.Function",
+              "version": "1.135.0"
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "greengrass-stream-mgr-accel/CDKMetadata",
+            "children": {
+              "Default": {
+                "id": "Default",
+                "path": "greengrass-stream-mgr-accel/CDKMetadata/Default",
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.CfnResource",
+                  "version": "1.135.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/core.Construct",
+              "version": "1.135.0"
+            }
+          }
+        },
+        "constructInfo": {
+          "fqn": "@aws-cdk/core.Stack",
+          "version": "1.135.0"
+        }
+      }
+    },
+    "constructInfo": {
+      "fqn": "@aws-cdk/core.App",
+      "version": "1.135.0"
+    }
+  }
+}
